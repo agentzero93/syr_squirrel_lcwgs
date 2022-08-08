@@ -1,0 +1,8 @@
+## ignore .Rhistory files ##
+*.Rhistory
+## ignore any downstream sequencing data generated (eg, from trimming, aligning) ##
+*.fastq.gz
+*.fasta.gz
+*.fa.gz
+*.fasta
+*.bam
