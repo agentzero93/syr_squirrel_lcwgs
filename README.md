@@ -23,6 +23,9 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 
 # Data generation (only running Syracuse samples as of now) #
 1) Check the quality of the raw reads (.fastq.gz) using FastQC and MultiQC.
+
+Note: SCCA1009 SCCA1011 SCCA1012 SCCA1017 SCCA1018 SCCA1020 SCCA1026 SCCA1033 SCCA1034 SCCA1040 were run at 10x, the rest were run at 3x.
+
 2) Trim the raw reads of adapter contamination and low-quality bases using Trimmomatic (then reassess quality with FastQC and MultiQC).
 3) Align the trimmed reads to the reference genome using BWA.
 4) Check initial quality of the alignments using QualiMap and MultiQC.
