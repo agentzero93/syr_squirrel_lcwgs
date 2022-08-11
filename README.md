@@ -29,7 +29,10 @@ Note: SCCA1009 SCCA1011 SCCA1012 SCCA1017 SCCA1018 SCCA1020 SCCA1026 SCCA1033 SC
 Note: Raw reads look good, just a bit of adapter contamination.
 
 2) Trim the raw reads of adapter contamination and low-quality bases using Trimmomatic (then reassess quality with FastQC and MultiQC).
-3) Align the trimmed reads to the reference genome using BWA.
+
+Note: Reads no longer have adapter contamination.
+
+4) Align the trimmed reads to the reference genome using BWA.
 
 Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sciurus_carolinensis_GCA_902686445.2/Info/Index
 
