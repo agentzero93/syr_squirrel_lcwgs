@@ -9,3 +9,5 @@
 ## ignore vcf files ##
 *.vcf.gz
 *.gvcf.gz
+## ignore slurm output messages ##
+*.out
