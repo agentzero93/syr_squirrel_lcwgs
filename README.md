@@ -32,7 +32,7 @@ Note: Raw reads look good, just a bit of adapter contamination.
 
 Note: Reads no longer have adapter contamination.
 
-4) Align the trimmed reads to the reference genome using BWA.
+3) Align the trimmed reads to the reference genome using BWA.
 
 Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sciurus_carolinensis_GCA_902686445.2/Info/Index
 
