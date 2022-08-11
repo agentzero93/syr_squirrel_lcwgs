@@ -30,6 +30,9 @@ Note: Raw reads look good, just a bit of adapter contamination.
 
 2) Trim the raw reads of adapter contamination and low-quality bases using Trimmomatic (then reassess quality with FastQC and MultiQC).
 3) Align the trimmed reads to the reference genome using BWA.
+
+Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sciurus_carolinensis_GCA_902686445.2/Info/Index
+
 4) Check initial quality of the alignments using QualiMap and MultiQC.
 5) Remove duplicate aligned reads using Picard (then verify that duplicates have been removed using QualiMap and MultiQC).
 6) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 47 here).
