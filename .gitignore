@@ -6,3 +6,6 @@
 *.fa.gz
 *.fasta
 *.bam
+## ignore vcf files ##
+*.vcf.gz
+*.gvcf.gz
