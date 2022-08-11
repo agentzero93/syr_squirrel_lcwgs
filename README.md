@@ -33,6 +33,8 @@ Note: Raw reads look good, just a bit of adapter contamination.
 
 Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sciurus_carolinensis_GCA_902686445.2/Info/Index
 
+Note: Aliging unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file (cat 1U.fastq.gz 2U.fastq.gz > UC.fastq.gz), then aligned. I plan to merge the unpaired and paired bams after I deduplicate them.
+
 4) Check initial quality of the alignments using QualiMap and MultiQC.
 5) Remove duplicate aligned reads using Picard (then verify that duplicates have been removed using QualiMap and MultiQC).
 6) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 47 here).
