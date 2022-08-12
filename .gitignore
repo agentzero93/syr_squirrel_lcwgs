@@ -6,7 +6,8 @@
 *.fa.gz
 *.fasta
 *.bam
-## ignore vcf and bam index files ##
+## ignore fasta, vcf, and bam index files ##
+*.gzi
 *.tbi
 *.bai
 ## ignore vcf files ##
