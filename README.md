@@ -36,12 +36,17 @@ Note: Reads no longer have adapter contamination.
 
 Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sciurus_carolinensis_GCA_902686445.2/Info/Index
 
-Note: Aliging unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file (cat 1U.fastq.gz 2U.fastq.gz > UC.fastq.gz), then aligned. I plan to merge the unpaired and paired bams after I deduplicate them.
+Note: Aliging unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file (cat 1U.fastq.gz 2U.fastq.gz > UC.fastq.gz), then aligned.
 
 Note: To parallelize, run across multiple nodes with as many threads as possible on your computer(s). Do not try to run multiple alignments on a single node, this will result in a major slow down (see https://www.biostars.org/p/420062/). 
 
 4) Check initial quality of the alignments using QualiMap and MultiQC.
-5) Remove duplicate aligned reads using Picard (then verify that duplicates have been removed using QualiMap and MultiQC).
+5) Mark and remove duplicate aligned reads using Picard MarkDuplicates (then verify that duplicates have been removed using QualiMap and MultiQC).
+
+Note: I merged the unpaired and paired read alignments (*_merged.bam) prior to deduplicating the reads using samtools merge.
+
+Note: Read groups got messed up after merging, so had to use Picard AddOrReplaceReadGroups to fix the read groups.
+
 6) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 47 here).
 7) Second step of the GATK SNP calling pipeline. Run GenomicsDBImport to combine the variants called across each sample (1 database produced for each chromosome; 21 here).
 8) Third and final step of the GATK SNP calling pipeline. Run GenotypeGVCFs to jointly call variants for every sample across all chromosomes (1 gvcf produced for each chromosome; 21 here). After the gvcfs are generated, use Picard to combine all 21 into one large gvcf file.
