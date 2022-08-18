@@ -1,0 +1,5715 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/agogo.css" type="text/css" />
+		<link rel="stylesheet" href="css/report.css" type="text/css" />
+	<title>Qualimap report: BAM QC</title>
+
+	</head>
+<body>
+	<div class="header-wrapper">
+		<div class="header">
+		<p class="logo"><a href="http://qualimap.bioinfo.cipf.es/">
+		<img class="logo" src="css/qualimap_logo_small.png" alt="Logo"/>
+		</a></p>
+<div class="headertitle"><a href="">Qualimap Report: BAM QC</a></div>
+	</div>
+</div>
+
+<div class="content-wrapper">
+<div class="content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body">
+<div class=section>
+<h2>Input data and parameters<a class="headerlink" name="input" title="Permalink to this headline">&nbsp;</a></h2>
+<div class=summary>
+
+
+<div class=table-summary>
+<h3>QualiMap command line</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>qualimap bamqc -bam scca0548_merged_dedup.bam -nw 400 -hm 3</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Alignment</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Command line: </td>
+<td class=column2>bwa mem -t 48 -R @RG\tID:HHGFNDSX3.3\tPL:ILLUMINA:\tSM:scca0548\tLB:wgs_scca0548 egsq ../trim/scca0548_152_041_S96_L003_R1_001_trimmed_1P.fastq.gz ../trim/scca0548_152_041_S96_L003_R2_001_trimmed_2P.fastq.gz</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Draw chromosome limits: </td>
+<td class=column2>no
+</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Analyze overlapping paired-end reads:</td>
+<td class=column2>no
+</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Program: </td>
+<td class=column2>bwa (0.7.17-r1188)</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Analysis date: </td>
+<td class=column2>Wed Aug 17 00:46:01 CDT 2022</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Size of a homopolymer: </td>
+<td class=column2>3</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Skip duplicate alignments: </td>
+<td class=column2>no
+</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number of windows: </td>
+<td class=column2>400</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>BAM file: </td>
+<td class=column2>scca0548_merged_dedup.bam</td>
+</tr>
+</table>
+</div>
+
+</div>
+</div> <!-- summary section -->
+
+<div class=section>
+<h2>Summary<a class="headerlink" name="summary" title="Permalink to this headline">&nbsp;</a></h2>
+<div class=summary>
+
+
+<div class=table-summary>
+<h3>Globals</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Reference size</td>
+<td class=column2>2,815,397,268</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number of reads</td>
+<td class=column2>74,137,694</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads</td>
+<td class=column2>69,616,553 / 93.9%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Supplementary alignments</td>
+<td class=column2>766,827 / 1.03%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Unmapped reads</td>
+<td class=column2>4,521,141 / 6.1%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped paired reads</td>
+<td class=column2>62,002,727 / 83.63%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads, first in pair</td>
+<td class=column2>31,454,985 / 42.43%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads,  second in pair</td>
+<td class=column2>30,547,742 / 41.2%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads, both in pair</td>
+<td class=column2>60,358,777 / 81.41%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads, singletons</td>
+<td class=column2>1,643,950 / 2.22%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Read min/max/mean length</td>
+<td class=column2>3 / 151 / 125.69</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Duplicated reads (estimated)</td>
+<td class=column2>5,284,248 / 7.13%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Duplication rate</td>
+<td class=column2>4.97%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Clipped reads</td>
+<td class=column2>5,350,253 / 7.22%</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>ACGT Content</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number/percentage of A's</td>
+<td class=column2>2,730,016,243 / 29.77%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number/percentage of C's</td>
+<td class=column2>1,851,689,884 / 20.2%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number/percentage of T's</td>
+<td class=column2>2,742,904,992 / 29.92%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number/percentage of G's</td>
+<td class=column2>1,844,282,697 / 20.11%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number/percentage of N's</td>
+<td class=column2>58,567 / 0%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>GC Percentage</td>
+<td class=column2>40.31%</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Coverage</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mean</td>
+<td class=column2>3.2604</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Standard Deviation</td>
+<td class=column2>17.4813</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Mapping Quality</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mean Mapping Quality</td>
+<td class=column2>42.44</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Insert size</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mean</td>
+<td class=column2>59,850.88</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Standard Deviation</td>
+<td class=column2>2,111,401.44</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>P25/Median/P75</td>
+<td class=column2>187 / 233 / 298</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Mismatches and indels</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>General error rate</td>
+<td class=column2>1.08%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mismatches</td>
+<td class=column2>92,555,493</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Insertions</td>
+<td class=column2>3,559,161</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads with at least one insertion</td>
+<td class=column2>4.67%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Deletions</td>
+<td class=column2>4,071,004</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads with at least one deletion</td>
+<td class=column2>5.42%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Homopolymer indels</td>
+<td class=column2>57.38%</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Chromosome stats</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td><b>Name</b></td>
+<td><b>Length</b></td>
+<td><b>Mapped bases</b></td>
+<td><b>Mean coverage</b></td>
+<td><b>Standard deviation</b></td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>1</td>
+<td>208993527</td>
+<td>512164561</td>
+<td>2.4506</td>
+<td>2.1154</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>2</td>
+<td>199827622</td>
+<td>514005954</td>
+<td>2.5722</td>
+<td>36.6812</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>3</td>
+<td>183546597</td>
+<td>448114940</td>
+<td>2.4414</td>
+<td>2.0647</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>4</td>
+<td>177112356</td>
+<td>435192694</td>
+<td>2.4572</td>
+<td>2.3402</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>5</td>
+<td>175905472</td>
+<td>512134425</td>
+<td>2.9114</td>
+<td>8.8322</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>6</td>
+<td>162265839</td>
+<td>394552995</td>
+<td>2.4315</td>
+<td>2.1384</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>7</td>
+<td>154993933</td>
+<td>389947069</td>
+<td>2.5159</td>
+<td>2.7451</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>8</td>
+<td>148229995</td>
+<td>387648083</td>
+<td>2.6152</td>
+<td>3.3203</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>9</td>
+<td>141423999</td>
+<td>350339614</td>
+<td>2.4772</td>
+<td>2.246</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>10</td>
+<td>140975125</td>
+<td>339064908</td>
+<td>2.4051</td>
+<td>2.0076</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>11</td>
+<td>135226351</td>
+<td>393494507</td>
+<td>2.9099</td>
+<td>4.1836</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>X</td>
+<td>131720120</td>
+<td>314460026</td>
+<td>2.3873</td>
+<td>2.1208</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>12</td>
+<td>118645147</td>
+<td>350286305</td>
+<td>2.9524</td>
+<td>3.3199</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>13</td>
+<td>94684172</td>
+<td>246710085</td>
+<td>2.6056</td>
+<td>3.0969</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>14</td>
+<td>88654151</td>
+<td>213735248</td>
+<td>2.4109</td>
+<td>2.1592</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>15</td>
+<td>83138899</td>
+<td>256175602</td>
+<td>3.0813</td>
+<td>15.8327</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>16</td>
+<td>68567161</td>
+<td>235264538</td>
+<td>3.4312</td>
+<td>8.5909</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>17</td>
+<td>66045118</td>
+<td>236426356</td>
+<td>3.5798</td>
+<td>8.6352</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>18</td>
+<td>41557064</td>
+<td>105352804</td>
+<td>2.5351</td>
+<td>13.0605</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>19</td>
+<td>30991954</td>
+<td>118782535</td>
+<td>3.8327</td>
+<td>5.596</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>Y</td>
+<td>4810933</td>
+<td>1555518</td>
+<td>0.3233</td>
+<td>1.6216</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000006.1</td>
+<td>8402289</td>
+<td>59781228</td>
+<td>7.1149</td>
+<td>11.023</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000004.1</td>
+<td>6410460</td>
+<td>43953296</td>
+<td>6.8565</td>
+<td>6.7051</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000005.1</td>
+<td>5308990</td>
+<td>106894293</td>
+<td>20.1346</td>
+<td>113.9575</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000007.1</td>
+<td>5063854</td>
+<td>43961863</td>
+<td>8.6815</td>
+<td>17.93</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000008.1</td>
+<td>4326611</td>
+<td>39992028</td>
+<td>9.2433</td>
+<td>10.5273</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000010.1</td>
+<td>3913960</td>
+<td>63341476</td>
+<td>16.1835</td>
+<td>56.5081</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000011.1</td>
+<td>3752592</td>
+<td>33482385</td>
+<td>8.9225</td>
+<td>17.9578</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000012.1</td>
+<td>3398208</td>
+<td>26744709</td>
+<td>7.8702</td>
+<td>8.5912</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000013.1</td>
+<td>3366225</td>
+<td>41322059</td>
+<td>12.2755</td>
+<td>17.0933</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000014.1</td>
+<td>3282125</td>
+<td>28462438</td>
+<td>8.672</td>
+<td>9.2545</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000036.1</td>
+<td>3118605</td>
+<td>17428404</td>
+<td>5.5885</td>
+<td>5.993</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000015.1</td>
+<td>3064279</td>
+<td>43915096</td>
+<td>14.3313</td>
+<td>14.0162</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000016.1</td>
+<td>3047915</td>
+<td>28453903</td>
+<td>9.3355</td>
+<td>11.9356</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000017.1</td>
+<td>3015224</td>
+<td>40216242</td>
+<td>13.3377</td>
+<td>15.7559</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000018.1</td>
+<td>2629848</td>
+<td>29912227</td>
+<td>11.3741</td>
+<td>10.1441</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000019.1</td>
+<td>2573765</td>
+<td>29371454</td>
+<td>11.4119</td>
+<td>11.9406</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000020.1</td>
+<td>2538454</td>
+<td>25666985</td>
+<td>10.1113</td>
+<td>13.3715</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000021.1</td>
+<td>2446612</td>
+<td>32856136</td>
+<td>13.4292</td>
+<td>15.7255</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000022.1</td>
+<td>2434104</td>
+<td>17578635</td>
+<td>7.2218</td>
+<td>10.0773</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000024.1</td>
+<td>2223422</td>
+<td>25252714</td>
+<td>11.3576</td>
+<td>12.9732</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000025.1</td>
+<td>2209048</td>
+<td>16191319</td>
+<td>7.3295</td>
+<td>7.3186</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000009.1</td>
+<td>2174612</td>
+<td>40884212</td>
+<td>18.8007</td>
+<td>194.8113</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000026.1</td>
+<td>2170072</td>
+<td>8353510</td>
+<td>3.8494</td>
+<td>3.6549</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000027.1</td>
+<td>2139930</td>
+<td>22028629</td>
+<td>10.2941</td>
+<td>9.3418</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000028.1</td>
+<td>2102767</td>
+<td>12087948</td>
+<td>5.7486</td>
+<td>25.7265</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000029.1</td>
+<td>2089753</td>
+<td>24578119</td>
+<td>11.7613</td>
+<td>11.943</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000030.1</td>
+<td>1940562</td>
+<td>12770162</td>
+<td>6.5807</td>
+<td>7.5222</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000031.1</td>
+<td>1877203</td>
+<td>19428989</td>
+<td>10.35</td>
+<td>17.0306</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000032.1</td>
+<td>1866882</td>
+<td>14919847</td>
+<td>7.9919</td>
+<td>9.4753</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000033.1</td>
+<td>1846946</td>
+<td>21016803</td>
+<td>11.3792</td>
+<td>58.3677</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000034.1</td>
+<td>1843046</td>
+<td>28662517</td>
+<td>15.5517</td>
+<td>22.9417</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000035.1</td>
+<td>1827521</td>
+<td>20403800</td>
+<td>11.1647</td>
+<td>10.3368</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000037.1</td>
+<td>1802838</td>
+<td>22637309</td>
+<td>12.5565</td>
+<td>12.5737</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000038.1</td>
+<td>1785753</td>
+<td>14211739</td>
+<td>7.9584</td>
+<td>11.1028</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000039.1</td>
+<td>1783449</td>
+<td>13482575</td>
+<td>7.5598</td>
+<td>17.8275</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000041.1</td>
+<td>1733835</td>
+<td>18693435</td>
+<td>10.7816</td>
+<td>10.0183</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000040.1</td>
+<td>1731233</td>
+<td>15086893</td>
+<td>8.7145</td>
+<td>9.8085</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000042.1</td>
+<td>1716154</td>
+<td>9091687</td>
+<td>5.2977</td>
+<td>6.0391</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000043.1</td>
+<td>1714846</td>
+<td>13865869</td>
+<td>8.0858</td>
+<td>7.3886</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000044.1</td>
+<td>1649170</td>
+<td>8395843</td>
+<td>5.091</td>
+<td>6.991</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000045.1</td>
+<td>1619137</td>
+<td>13941512</td>
+<td>8.6105</td>
+<td>10.1856</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000046.1</td>
+<td>1596526</td>
+<td>13676007</td>
+<td>8.5661</td>
+<td>16.8328</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000047.1</td>
+<td>1581602</td>
+<td>12968750</td>
+<td>8.1998</td>
+<td>9.7529</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000048.1</td>
+<td>1567387</td>
+<td>15206476</td>
+<td>9.7018</td>
+<td>7.835</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000049.1</td>
+<td>1518027</td>
+<td>4304650</td>
+<td>2.8357</td>
+<td>2.768</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000050.1</td>
+<td>1505718</td>
+<td>13720841</td>
+<td>9.1125</td>
+<td>13.4375</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000001.1</td>
+<td>1427275</td>
+<td>7608741</td>
+<td>5.331</td>
+<td>5.3645</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000002.1</td>
+<td>1380103</td>
+<td>9418833</td>
+<td>6.8247</td>
+<td>8.4296</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000003.1</td>
+<td>1340613</td>
+<td>3737050</td>
+<td>2.7876</td>
+<td>2.6356</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000051.1</td>
+<td>1284951</td>
+<td>10078644</td>
+<td>7.8436</td>
+<td>15.6248</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000052.1</td>
+<td>1272262</td>
+<td>13760545</td>
+<td>10.8158</td>
+<td>10.25</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000053.1</td>
+<td>1270296</td>
+<td>6403558</td>
+<td>5.041</td>
+<td>6.846</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000054.1</td>
+<td>1257048</td>
+<td>13579431</td>
+<td>10.8026</td>
+<td>7.7977</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000055.1</td>
+<td>1222577</td>
+<td>5236489</td>
+<td>4.2832</td>
+<td>5.6223</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000056.1</td>
+<td>1195167</td>
+<td>30263136</td>
+<td>25.3213</td>
+<td>28.2589</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000057.1</td>
+<td>1185416</td>
+<td>11058272</td>
+<td>9.3286</td>
+<td>8.7358</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000058.1</td>
+<td>1173495</td>
+<td>13765227</td>
+<td>11.7301</td>
+<td>15.381</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000059.1</td>
+<td>1160222</td>
+<td>9508905</td>
+<td>8.1958</td>
+<td>11.0451</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000060.1</td>
+<td>1155998</td>
+<td>8799031</td>
+<td>7.6116</td>
+<td>17.3011</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000061.1</td>
+<td>1149056</td>
+<td>8966120</td>
+<td>7.803</td>
+<td>8.1679</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000062.1</td>
+<td>1135576</td>
+<td>12646377</td>
+<td>11.1365</td>
+<td>10.6268</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000063.1</td>
+<td>1097598</td>
+<td>6369309</td>
+<td>5.803</td>
+<td>5.167</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000064.1</td>
+<td>1086809</td>
+<td>9598497</td>
+<td>8.8318</td>
+<td>7.7798</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000065.1</td>
+<td>1071909</td>
+<td>8099244</td>
+<td>7.5559</td>
+<td>7.3659</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000067.1</td>
+<td>1055643</td>
+<td>11236188</td>
+<td>10.6439</td>
+<td>12.7348</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000066.1</td>
+<td>1055014</td>
+<td>8327096</td>
+<td>7.8929</td>
+<td>7.1701</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000068.1</td>
+<td>1038501</td>
+<td>4312593</td>
+<td>4.1527</td>
+<td>6.5499</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000069.1</td>
+<td>1033007</td>
+<td>6103752</td>
+<td>5.9087</td>
+<td>6.7172</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000070.1</td>
+<td>998462</td>
+<td>11980151</td>
+<td>11.9986</td>
+<td>12.2536</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000071.1</td>
+<td>997349</td>
+<td>19328921</td>
+<td>19.3803</td>
+<td>25.6064</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000072.1</td>
+<td>993668</td>
+<td>7309445</td>
+<td>7.356</td>
+<td>16.59</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000073.1</td>
+<td>983219</td>
+<td>5741054</td>
+<td>5.839</td>
+<td>4.7781</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000074.1</td>
+<td>976035</td>
+<td>9032649</td>
+<td>9.2544</td>
+<td>10.3062</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000075.1</td>
+<td>943491</td>
+<td>3744343</td>
+<td>3.9686</td>
+<td>4.5412</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000076.1</td>
+<td>916527</td>
+<td>6917911</td>
+<td>7.548</td>
+<td>7.7598</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000077.1</td>
+<td>903651</td>
+<td>14604761</td>
+<td>16.1619</td>
+<td>10.9672</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000078.1</td>
+<td>875870</td>
+<td>9064559</td>
+<td>10.3492</td>
+<td>11.3195</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000079.1</td>
+<td>873692</td>
+<td>11392246</td>
+<td>13.0392</td>
+<td>7.6739</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000080.1</td>
+<td>870178</td>
+<td>8300220</td>
+<td>9.5385</td>
+<td>13.2122</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000081.1</td>
+<td>869032</td>
+<td>2101534</td>
+<td>2.4182</td>
+<td>2.0673</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000082.1</td>
+<td>866106</td>
+<td>2436592</td>
+<td>2.8133</td>
+<td>2.537</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000083.1</td>
+<td>855235</td>
+<td>2887294</td>
+<td>3.376</td>
+<td>5.0401</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000084.1</td>
+<td>851968</td>
+<td>6079445</td>
+<td>7.1358</td>
+<td>5.167</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000085.1</td>
+<td>847927</td>
+<td>2097547</td>
+<td>2.4737</td>
+<td>2.1683</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000086.1</td>
+<td>843827</td>
+<td>6214307</td>
+<td>7.3644</td>
+<td>5.0087</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000087.1</td>
+<td>841222</td>
+<td>6448787</td>
+<td>7.666</td>
+<td>8.4624</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000088.1</td>
+<td>840851</td>
+<td>22224344</td>
+<td>26.4308</td>
+<td>35.3314</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000089.1</td>
+<td>822968</td>
+<td>8919533</td>
+<td>10.8383</td>
+<td>7.8863</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000090.1</td>
+<td>822590</td>
+<td>11815628</td>
+<td>14.3639</td>
+<td>20.2874</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000092.1</td>
+<td>803501</td>
+<td>7273141</td>
+<td>9.0518</td>
+<td>7.6531</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000091.1</td>
+<td>802460</td>
+<td>13422758</td>
+<td>16.727</td>
+<td>19.4556</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000093.1</td>
+<td>797717</td>
+<td>9828185</td>
+<td>12.3204</td>
+<td>9.0109</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000094.1</td>
+<td>781445</td>
+<td>2560180</td>
+<td>3.2762</td>
+<td>9.2468</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000095.1</td>
+<td>779632</td>
+<td>3159237</td>
+<td>4.0522</td>
+<td>4.3738</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000096.1</td>
+<td>778482</td>
+<td>3011853</td>
+<td>3.8689</td>
+<td>4.9218</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000097.1</td>
+<td>772819</td>
+<td>8063460</td>
+<td>10.4338</td>
+<td>15.4521</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000098.1</td>
+<td>751341</td>
+<td>4334839</td>
+<td>5.7695</td>
+<td>5.9524</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000099.1</td>
+<td>742119</td>
+<td>4399723</td>
+<td>5.9286</td>
+<td>8.2051</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000100.1</td>
+<td>738778</td>
+<td>4006033</td>
+<td>5.4225</td>
+<td>4.445</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000101.1</td>
+<td>720233</td>
+<td>7268553</td>
+<td>10.0919</td>
+<td>9.3142</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000102.1</td>
+<td>714362</td>
+<td>2763315</td>
+<td>3.8682</td>
+<td>11.0036</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000103.1</td>
+<td>708084</td>
+<td>5354126</td>
+<td>7.5614</td>
+<td>5.7631</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000023.1</td>
+<td>706808</td>
+<td>1797284</td>
+<td>2.5428</td>
+<td>3.7671</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000104.1</td>
+<td>702083</td>
+<td>4415713</td>
+<td>6.2894</td>
+<td>6.1234</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000105.1</td>
+<td>669162</td>
+<td>1680081</td>
+<td>2.5107</td>
+<td>2.5189</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000106.1</td>
+<td>667040</td>
+<td>4246562</td>
+<td>6.3663</td>
+<td>7.1182</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000107.1</td>
+<td>666908</td>
+<td>5501507</td>
+<td>8.2493</td>
+<td>10.3174</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000108.1</td>
+<td>655365</td>
+<td>1475973</td>
+<td>2.2521</td>
+<td>2.1842</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000109.1</td>
+<td>636678</td>
+<td>1543235</td>
+<td>2.4239</td>
+<td>2.1645</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000110.1</td>
+<td>629883</td>
+<td>8077094</td>
+<td>12.8232</td>
+<td>13.5795</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000111.1</td>
+<td>626692</td>
+<td>6523471</td>
+<td>10.4094</td>
+<td>19.8853</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000112.1</td>
+<td>624667</td>
+<td>5439359</td>
+<td>8.7076</td>
+<td>9.1276</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000113.1</td>
+<td>615590</td>
+<td>4441875</td>
+<td>7.2156</td>
+<td>6.0612</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000114.1</td>
+<td>603911</td>
+<td>7891473</td>
+<td>13.0673</td>
+<td>9.8723</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000115.1</td>
+<td>602982</td>
+<td>2776674</td>
+<td>4.6049</td>
+<td>5.0423</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000116.1</td>
+<td>602607</td>
+<td>1734241</td>
+<td>2.8779</td>
+<td>3.3654</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000117.1</td>
+<td>600656</td>
+<td>7046582</td>
+<td>11.7315</td>
+<td>9.0547</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000118.1</td>
+<td>588741</td>
+<td>4358994</td>
+<td>7.4039</td>
+<td>9.9261</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000119.1</td>
+<td>585116</td>
+<td>6332106</td>
+<td>10.822</td>
+<td>11.4633</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000120.1</td>
+<td>577100</td>
+<td>2012787</td>
+<td>3.4878</td>
+<td>3.1284</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000121.1</td>
+<td>576880</td>
+<td>1565067</td>
+<td>2.713</td>
+<td>2.8099</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000122.1</td>
+<td>575482</td>
+<td>5647242</td>
+<td>9.8131</td>
+<td>32.8787</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000123.1</td>
+<td>573769</td>
+<td>3103149</td>
+<td>5.4084</td>
+<td>4.5664</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000124.1</td>
+<td>557629</td>
+<td>1557853</td>
+<td>2.7937</td>
+<td>2.6715</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000125.1</td>
+<td>555259</td>
+<td>3383785</td>
+<td>6.0941</td>
+<td>6.8973</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000126.1</td>
+<td>523760</td>
+<td>2342994</td>
+<td>4.4734</td>
+<td>3.7357</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000127.1</td>
+<td>522823</td>
+<td>4968277</td>
+<td>9.5028</td>
+<td>6.1289</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000128.1</td>
+<td>522529</td>
+<td>6544115</td>
+<td>12.5239</td>
+<td>14.6749</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000129.1</td>
+<td>516860</td>
+<td>4443229</td>
+<td>8.5966</td>
+<td>5.9336</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000130.1</td>
+<td>515223</td>
+<td>3290173</td>
+<td>6.3859</td>
+<td>6.689</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000131.1</td>
+<td>511122</td>
+<td>3982243</td>
+<td>7.7912</td>
+<td>21.4354</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000132.1</td>
+<td>506000</td>
+<td>4772558</td>
+<td>9.4319</td>
+<td>11.719</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000133.1</td>
+<td>500254</td>
+<td>3045619</td>
+<td>6.0881</td>
+<td>4.2334</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000134.1</td>
+<td>497033</td>
+<td>2447750</td>
+<td>4.9247</td>
+<td>5.3551</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000135.1</td>
+<td>487656</td>
+<td>3818279</td>
+<td>7.8299</td>
+<td>6.6498</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000136.1</td>
+<td>483723</td>
+<td>8991348</td>
+<td>18.5878</td>
+<td>19.5492</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000137.1</td>
+<td>463774</td>
+<td>2219801</td>
+<td>4.7864</td>
+<td>4.127</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000138.1</td>
+<td>455938</td>
+<td>4888186</td>
+<td>10.7212</td>
+<td>10.7097</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000139.1</td>
+<td>435986</td>
+<td>4916239</td>
+<td>11.2761</td>
+<td>12.529</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000140.1</td>
+<td>434233</td>
+<td>4758546</td>
+<td>10.9585</td>
+<td>8.5374</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000141.1</td>
+<td>433389</td>
+<td>999140</td>
+<td>2.3054</td>
+<td>2.6986</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000142.1</td>
+<td>428685</td>
+<td>1939304</td>
+<td>4.5238</td>
+<td>10.9025</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000146.1</td>
+<td>424147</td>
+<td>5809711</td>
+<td>13.6974</td>
+<td>14.3189</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000143.1</td>
+<td>423797</td>
+<td>4851159</td>
+<td>11.4469</td>
+<td>8.3265</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000144.1</td>
+<td>423298</td>
+<td>994343</td>
+<td>2.349</td>
+<td>2.1205</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000145.1</td>
+<td>423295</td>
+<td>9308083</td>
+<td>21.9896</td>
+<td>20.6473</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000147.1</td>
+<td>403110</td>
+<td>2641237</td>
+<td>6.5521</td>
+<td>5.9728</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000148.1</td>
+<td>397254</td>
+<td>6236068</td>
+<td>15.6979</td>
+<td>12.9661</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000149.1</td>
+<td>396190</td>
+<td>2927143</td>
+<td>7.3882</td>
+<td>6.5971</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000150.1</td>
+<td>388860</td>
+<td>987675</td>
+<td>2.5399</td>
+<td>2.3916</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000151.1</td>
+<td>388528</td>
+<td>2080910</td>
+<td>5.3559</td>
+<td>6.9592</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000152.1</td>
+<td>387254</td>
+<td>4316406</td>
+<td>11.1462</td>
+<td>9.7867</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000153.1</td>
+<td>384629</td>
+<td>2379120</td>
+<td>6.1855</td>
+<td>10.7594</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000154.1</td>
+<td>381352</td>
+<td>5407380</td>
+<td>14.1795</td>
+<td>16.405</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000155.1</td>
+<td>378483</td>
+<td>3606396</td>
+<td>9.5286</td>
+<td>12.1351</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000156.1</td>
+<td>371290</td>
+<td>5604083</td>
+<td>15.0935</td>
+<td>14.5613</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000157.1</td>
+<td>364648</td>
+<td>1696739</td>
+<td>4.6531</td>
+<td>4.8929</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000158.1</td>
+<td>360501</td>
+<td>4467308</td>
+<td>12.3919</td>
+<td>11.6119</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000159.1</td>
+<td>359213</td>
+<td>818637</td>
+<td>2.279</td>
+<td>2.1286</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000160.1</td>
+<td>357184</td>
+<td>2476490</td>
+<td>6.9334</td>
+<td>7.185</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000161.1</td>
+<td>355641</td>
+<td>3731038</td>
+<td>10.491</td>
+<td>6.2591</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000163.1</td>
+<td>352475</td>
+<td>14474549</td>
+<td>41.0655</td>
+<td>172.4624</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000162.1</td>
+<td>352246</td>
+<td>5522114</td>
+<td>15.6769</td>
+<td>9.7232</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000164.1</td>
+<td>346423</td>
+<td>2163531</td>
+<td>6.2453</td>
+<td>4.6814</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000167.1</td>
+<td>345978</td>
+<td>3587871</td>
+<td>10.3702</td>
+<td>9.4907</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000165.1</td>
+<td>345838</td>
+<td>875075</td>
+<td>2.5303</td>
+<td>1.9823</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000166.1</td>
+<td>344975</td>
+<td>2305272</td>
+<td>6.6824</td>
+<td>5.525</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000168.1</td>
+<td>343537</td>
+<td>4037364</td>
+<td>11.7523</td>
+<td>12.0117</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000169.1</td>
+<td>342052</td>
+<td>191198</td>
+<td>0.559</td>
+<td>1.9862</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000170.1</td>
+<td>338614</td>
+<td>3982441</td>
+<td>11.761</td>
+<td>7.5014</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000171.1</td>
+<td>337741</td>
+<td>2783964</td>
+<td>8.2429</td>
+<td>7.0997</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000172.1</td>
+<td>335351</td>
+<td>2315396</td>
+<td>6.9044</td>
+<td>5.457</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000173.1</td>
+<td>333173</td>
+<td>3087993</td>
+<td>9.2684</td>
+<td>7.2551</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000174.1</td>
+<td>330766</td>
+<td>1024076</td>
+<td>3.0961</td>
+<td>4.381</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000175.1</td>
+<td>328544</td>
+<td>978985</td>
+<td>2.9798</td>
+<td>3.2529</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000176.1</td>
+<td>325611</td>
+<td>1315517</td>
+<td>4.0401</td>
+<td>4.7562</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000177.1</td>
+<td>312653</td>
+<td>1881445</td>
+<td>6.0177</td>
+<td>4.6754</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000178.1</td>
+<td>311720</td>
+<td>749579</td>
+<td>2.4047</td>
+<td>2.0696</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000179.1</td>
+<td>299983</td>
+<td>1035762</td>
+<td>3.4527</td>
+<td>3.016</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000180.1</td>
+<td>298382</td>
+<td>1706036</td>
+<td>5.7176</td>
+<td>3.9133</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000181.1</td>
+<td>296910</td>
+<td>1025109</td>
+<td>3.4526</td>
+<td>3.4134</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000182.1</td>
+<td>286039</td>
+<td>711844</td>
+<td>2.4886</td>
+<td>2.0378</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000183.1</td>
+<td>284972</td>
+<td>7304107</td>
+<td>25.631</td>
+<td>36.9894</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000184.1</td>
+<td>283100</td>
+<td>1333255</td>
+<td>4.7095</td>
+<td>4.2714</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000185.1</td>
+<td>282771</td>
+<td>1037773</td>
+<td>3.67</td>
+<td>3.5018</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000186.1</td>
+<td>282284</td>
+<td>368313</td>
+<td>1.3048</td>
+<td>2.6356</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000187.1</td>
+<td>279045</td>
+<td>975952</td>
+<td>3.4975</td>
+<td>9.2743</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000188.1</td>
+<td>276694</td>
+<td>3789503</td>
+<td>13.6956</td>
+<td>7.6395</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000189.1</td>
+<td>273424</td>
+<td>3789717</td>
+<td>13.8602</td>
+<td>12.631</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000190.1</td>
+<td>264885</td>
+<td>1203318</td>
+<td>4.5428</td>
+<td>3.9406</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000191.1</td>
+<td>263133</td>
+<td>3775497</td>
+<td>14.3482</td>
+<td>16.9259</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000192.1</td>
+<td>261433</td>
+<td>1013438</td>
+<td>3.8765</td>
+<td>8.7823</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000193.1</td>
+<td>260399</td>
+<td>625128</td>
+<td>2.4007</td>
+<td>2.0403</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000194.1</td>
+<td>257280</td>
+<td>1471438</td>
+<td>5.7192</td>
+<td>6.419</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000195.1</td>
+<td>256148</td>
+<td>2058258</td>
+<td>8.0354</td>
+<td>9.2712</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000196.1</td>
+<td>252770</td>
+<td>4638799</td>
+<td>18.3519</td>
+<td>22.3649</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000197.1</td>
+<td>248284</td>
+<td>3448007</td>
+<td>13.8874</td>
+<td>13.611</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000198.1</td>
+<td>237513</td>
+<td>1923983</td>
+<td>8.1005</td>
+<td>6.8354</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000199.1</td>
+<td>235411</td>
+<td>1744401</td>
+<td>7.41</td>
+<td>6.08</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000200.1</td>
+<td>234877</td>
+<td>254262</td>
+<td>1.0825</td>
+<td>3.7795</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000201.1</td>
+<td>234656</td>
+<td>1781150</td>
+<td>7.5905</td>
+<td>5.2854</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000203.1</td>
+<td>233262</td>
+<td>833014</td>
+<td>3.5712</td>
+<td>4.5965</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000202.1</td>
+<td>233150</td>
+<td>707758</td>
+<td>3.0356</td>
+<td>3.0341</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000204.1</td>
+<td>225486</td>
+<td>1314676</td>
+<td>5.8304</td>
+<td>3.1132</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000205.1</td>
+<td>224835</td>
+<td>3661438</td>
+<td>16.285</td>
+<td>15.7521</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000206.1</td>
+<td>224219</td>
+<td>16422178</td>
+<td>73.2417</td>
+<td>414.6886</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000208.1</td>
+<td>223585</td>
+<td>597683</td>
+<td>2.6732</td>
+<td>2.6908</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000207.1</td>
+<td>222968</td>
+<td>849967</td>
+<td>3.8121</td>
+<td>8.2815</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000209.1</td>
+<td>222323</td>
+<td>2797347</td>
+<td>12.5824</td>
+<td>8.5938</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000211.1</td>
+<td>216999</td>
+<td>2861230</td>
+<td>13.1855</td>
+<td>9.2423</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000212.1</td>
+<td>216539</td>
+<td>1115366</td>
+<td>5.1509</td>
+<td>6.701</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000210.1</td>
+<td>216391</td>
+<td>1635828</td>
+<td>7.5596</td>
+<td>8.8032</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000214.1</td>
+<td>215530</td>
+<td>671330</td>
+<td>3.1148</td>
+<td>3.5733</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000215.1</td>
+<td>215341</td>
+<td>2957156</td>
+<td>13.7324</td>
+<td>14.6996</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000213.1</td>
+<td>214323</td>
+<td>1198845</td>
+<td>5.5936</td>
+<td>11.7276</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000216.1</td>
+<td>213042</td>
+<td>1453808</td>
+<td>6.824</td>
+<td>4.47</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000217.1</td>
+<td>212875</td>
+<td>576848</td>
+<td>2.7098</td>
+<td>2.9346</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000218.1</td>
+<td>211359</td>
+<td>3443711</td>
+<td>16.2932</td>
+<td>17.9122</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000219.1</td>
+<td>210324</td>
+<td>1220879</td>
+<td>5.8048</td>
+<td>4.1967</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000220.1</td>
+<td>209724</td>
+<td>705707</td>
+<td>3.3649</td>
+<td>2.6944</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000222.1</td>
+<td>208408</td>
+<td>1548911</td>
+<td>7.4321</td>
+<td>3.9789</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000221.1</td>
+<td>207749</td>
+<td>975387</td>
+<td>4.695</td>
+<td>4.9761</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000225.1</td>
+<td>206498</td>
+<td>4348312</td>
+<td>21.0574</td>
+<td>22.8094</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000223.1</td>
+<td>206166</td>
+<td>1429386</td>
+<td>6.9332</td>
+<td>3.7492</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000224.1</td>
+<td>205472</td>
+<td>4619341</td>
+<td>22.4816</td>
+<td>26.3955</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000226.1</td>
+<td>205193</td>
+<td>1153357</td>
+<td>5.6208</td>
+<td>7.2022</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000227.1</td>
+<td>204173</td>
+<td>572275</td>
+<td>2.8029</td>
+<td>3.2659</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000228.1</td>
+<td>202652</td>
+<td>2784757</td>
+<td>13.7416</td>
+<td>15.8668</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000229.1</td>
+<td>201759</td>
+<td>1047105</td>
+<td>5.1899</td>
+<td>3.5023</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000230.1</td>
+<td>201038</td>
+<td>1615344</td>
+<td>8.035</td>
+<td>9.752</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000232.1</td>
+<td>198883</td>
+<td>2067332</td>
+<td>10.3947</td>
+<td>11.0651</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000231.1</td>
+<td>197793</td>
+<td>848553</td>
+<td>4.2901</td>
+<td>29.1309</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000233.1</td>
+<td>191916</td>
+<td>1410292</td>
+<td>7.3485</td>
+<td>4.9784</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000234.1</td>
+<td>189626</td>
+<td>1168691</td>
+<td>6.1631</td>
+<td>7.1678</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000235.1</td>
+<td>189394</td>
+<td>848847</td>
+<td>4.4819</td>
+<td>10.9027</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000236.1</td>
+<td>185571</td>
+<td>375553</td>
+<td>2.0238</td>
+<td>2.0515</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000237.1</td>
+<td>185176</td>
+<td>1984500</td>
+<td>10.7168</td>
+<td>8.4143</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000238.1</td>
+<td>181262</td>
+<td>1193297</td>
+<td>6.5833</td>
+<td>4.3057</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000239.1</td>
+<td>179222</td>
+<td>663593</td>
+<td>3.7026</td>
+<td>4.8759</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000240.1</td>
+<td>175756</td>
+<td>1409325</td>
+<td>8.0186</td>
+<td>6.3189</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000241.1</td>
+<td>175293</td>
+<td>902194</td>
+<td>5.1468</td>
+<td>5.0146</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000242.1</td>
+<td>174821</td>
+<td>656624</td>
+<td>3.756</td>
+<td>3.5491</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000243.1</td>
+<td>173869</td>
+<td>266988</td>
+<td>1.5356</td>
+<td>2.4416</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000244.1</td>
+<td>172055</td>
+<td>2766798</td>
+<td>16.0809</td>
+<td>18.6733</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000245.1</td>
+<td>170494</td>
+<td>377291</td>
+<td>2.2129</td>
+<td>2.7754</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000246.1</td>
+<td>169753</td>
+<td>1492553</td>
+<td>8.7925</td>
+<td>11.4716</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000247.1</td>
+<td>169379</td>
+<td>1683628</td>
+<td>9.94</td>
+<td>7.0715</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000249.1</td>
+<td>167593</td>
+<td>1983069</td>
+<td>11.8326</td>
+<td>14.9307</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000248.1</td>
+<td>167553</td>
+<td>759409</td>
+<td>4.5324</td>
+<td>3.3437</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000250.1</td>
+<td>167213</td>
+<td>2783339</td>
+<td>16.6455</td>
+<td>7.88</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000252.1</td>
+<td>164824</td>
+<td>1186085</td>
+<td>7.1961</td>
+<td>6.5332</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000251.1</td>
+<td>164661</td>
+<td>1110175</td>
+<td>6.7422</td>
+<td>4.0725</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000253.1</td>
+<td>163690</td>
+<td>1135208</td>
+<td>6.9351</td>
+<td>9.3098</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000254.1</td>
+<td>163531</td>
+<td>2899703</td>
+<td>17.7318</td>
+<td>12.9809</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000257.1</td>
+<td>163152</td>
+<td>1299695</td>
+<td>7.9662</td>
+<td>8.7494</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000258.1</td>
+<td>162823</td>
+<td>2017373</td>
+<td>12.39</td>
+<td>10.8734</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000255.1</td>
+<td>162805</td>
+<td>386588</td>
+<td>2.3745</td>
+<td>1.9691</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000256.1</td>
+<td>162307</td>
+<td>48502</td>
+<td>0.2988</td>
+<td>1.5608</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000259.1</td>
+<td>160869</td>
+<td>260870</td>
+<td>1.6216</td>
+<td>3.3378</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000260.1</td>
+<td>157921</td>
+<td>2547747</td>
+<td>16.133</td>
+<td>13.1166</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000261.1</td>
+<td>156939</td>
+<td>568638</td>
+<td>3.6233</td>
+<td>3.5108</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000263.1</td>
+<td>156181</td>
+<td>56534</td>
+<td>0.362</td>
+<td>1.0955</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000262.1</td>
+<td>156095</td>
+<td>1707639</td>
+<td>10.9397</td>
+<td>7.8131</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000264.1</td>
+<td>155591</td>
+<td>2359957</td>
+<td>15.1677</td>
+<td>8.9366</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000265.1</td>
+<td>154393</td>
+<td>550559</td>
+<td>3.566</td>
+<td>3.417</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000267.1</td>
+<td>153722</td>
+<td>2648702</td>
+<td>17.2305</td>
+<td>16.6112</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000266.1</td>
+<td>153136</td>
+<td>50489</td>
+<td>0.3297</td>
+<td>1.1264</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000268.1</td>
+<td>150428</td>
+<td>2811628</td>
+<td>18.6909</td>
+<td>15.6807</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000269.1</td>
+<td>149054</td>
+<td>578651</td>
+<td>3.8822</td>
+<td>4.0068</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000271.1</td>
+<td>148986</td>
+<td>321351</td>
+<td>2.1569</td>
+<td>2.9016</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000270.1</td>
+<td>148980</td>
+<td>895056</td>
+<td>6.0079</td>
+<td>4.4079</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000272.1</td>
+<td>147817</td>
+<td>503948</td>
+<td>3.4093</td>
+<td>2.7803</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000273.1</td>
+<td>144029</td>
+<td>330308</td>
+<td>2.2933</td>
+<td>1.9785</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000274.1</td>
+<td>143901</td>
+<td>212710</td>
+<td>1.4782</td>
+<td>1.7472</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000275.1</td>
+<td>143751</td>
+<td>397963</td>
+<td>2.7684</td>
+<td>3.089</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000276.1</td>
+<td>142547</td>
+<td>351609</td>
+<td>2.4666</td>
+<td>2.3872</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000277.1</td>
+<td>142465</td>
+<td>423126</td>
+<td>2.97</td>
+<td>3.1026</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000278.1</td>
+<td>139208</td>
+<td>351213</td>
+<td>2.5229</td>
+<td>3.1835</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000280.1</td>
+<td>138929</td>
+<td>1663699</td>
+<td>11.9752</td>
+<td>14.4769</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000279.1</td>
+<td>138599</td>
+<td>897106</td>
+<td>6.4727</td>
+<td>5.3643</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000281.1</td>
+<td>137777</td>
+<td>2609757</td>
+<td>18.9419</td>
+<td>17.0253</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000282.1</td>
+<td>135380</td>
+<td>252715</td>
+<td>1.8667</td>
+<td>2.0699</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000283.1</td>
+<td>135073</td>
+<td>413569</td>
+<td>3.0618</td>
+<td>3.3134</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000284.1</td>
+<td>134642</td>
+<td>600000</td>
+<td>4.4563</td>
+<td>3.8311</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000285.1</td>
+<td>134250</td>
+<td>551106</td>
+<td>4.1051</td>
+<td>3.963</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000286.1</td>
+<td>134107</td>
+<td>87528</td>
+<td>0.6527</td>
+<td>1.7141</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000288.1</td>
+<td>133775</td>
+<td>576076</td>
+<td>4.3063</td>
+<td>4.114</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000287.1</td>
+<td>133753</td>
+<td>317773</td>
+<td>2.3758</td>
+<td>2.0069</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000289.1</td>
+<td>133618</td>
+<td>325732</td>
+<td>2.4378</td>
+<td>2.9978</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000290.1</td>
+<td>132433</td>
+<td>1083566</td>
+<td>8.182</td>
+<td>7.2004</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000291.1</td>
+<td>130866</td>
+<td>1181617</td>
+<td>9.0292</td>
+<td>7.1535</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000292.1</td>
+<td>129861</td>
+<td>385755</td>
+<td>2.9705</td>
+<td>5.6636</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000293.1</td>
+<td>128786</td>
+<td>120926</td>
+<td>0.939</td>
+<td>2.1745</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000294.1</td>
+<td>128719</td>
+<td>936109</td>
+<td>7.2725</td>
+<td>3.5409</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000295.1</td>
+<td>127911</td>
+<td>320474</td>
+<td>2.5054</td>
+<td>2.0589</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000296.1</td>
+<td>126110</td>
+<td>796645</td>
+<td>6.3171</td>
+<td>5.0241</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000297.1</td>
+<td>124284</td>
+<td>1138681</td>
+<td>9.1619</td>
+<td>7.3127</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000298.1</td>
+<td>122142</td>
+<td>282955</td>
+<td>2.3166</td>
+<td>2.1101</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000299.1</td>
+<td>121697</td>
+<td>474490</td>
+<td>3.8989</td>
+<td>4.6641</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000300.1</td>
+<td>120978</td>
+<td>830814</td>
+<td>6.8675</td>
+<td>3.605</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000301.1</td>
+<td>120623</td>
+<td>288087</td>
+<td>2.3883</td>
+<td>2.2803</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000302.1</td>
+<td>120264</td>
+<td>295278</td>
+<td>2.4552</td>
+<td>2.1606</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000303.1</td>
+<td>119882</td>
+<td>1201426</td>
+<td>10.0217</td>
+<td>9.759</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000304.1</td>
+<td>119718</td>
+<td>1309388</td>
+<td>10.9373</td>
+<td>5.8362</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000305.1</td>
+<td>119395</td>
+<td>943355</td>
+<td>7.9011</td>
+<td>4.6958</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000306.1</td>
+<td>119046</td>
+<td>446370</td>
+<td>3.7496</td>
+<td>4.8472</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000309.1</td>
+<td>117979</td>
+<td>2834782</td>
+<td>24.0279</td>
+<td>43.6981</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000307.1</td>
+<td>117843</td>
+<td>1014594</td>
+<td>8.6097</td>
+<td>5.7071</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000308.1</td>
+<td>116068</td>
+<td>509159</td>
+<td>4.3867</td>
+<td>3.1767</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000311.1</td>
+<td>115874</td>
+<td>448433</td>
+<td>3.87</td>
+<td>3.3172</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000310.1</td>
+<td>115568</td>
+<td>801559</td>
+<td>6.9358</td>
+<td>6.2951</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000312.1</td>
+<td>114154</td>
+<td>335172</td>
+<td>2.9361</td>
+<td>2.9777</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000313.1</td>
+<td>113895</td>
+<td>291695</td>
+<td>2.5611</td>
+<td>2.5107</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000314.1</td>
+<td>113119</td>
+<td>274856</td>
+<td>2.4298</td>
+<td>1.9223</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000315.1</td>
+<td>112477</td>
+<td>801920</td>
+<td>7.1296</td>
+<td>8.9445</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000317.1</td>
+<td>111750</td>
+<td>605758</td>
+<td>5.4207</td>
+<td>4.2528</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000318.1</td>
+<td>111398</td>
+<td>50843</td>
+<td>0.4564</td>
+<td>1.3635</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000316.1</td>
+<td>111375</td>
+<td>275672</td>
+<td>2.4752</td>
+<td>2.0167</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000319.1</td>
+<td>110165</td>
+<td>664403</td>
+<td>6.031</td>
+<td>3.9443</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000323.1</td>
+<td>109880</td>
+<td>180850</td>
+<td>1.6459</td>
+<td>2.2325</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000320.1</td>
+<td>109718</td>
+<td>956605</td>
+<td>8.7188</td>
+<td>4.1009</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000321.1</td>
+<td>109355</td>
+<td>1084265</td>
+<td>9.9151</td>
+<td>5.3345</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000322.1</td>
+<td>109258</td>
+<td>280773</td>
+<td>2.5698</td>
+<td>2.0025</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000326.1</td>
+<td>109096</td>
+<td>3406691</td>
+<td>31.2265</td>
+<td>31.4153</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000325.1</td>
+<td>108194</td>
+<td>517572</td>
+<td>4.7837</td>
+<td>4.5091</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000324.1</td>
+<td>108192</td>
+<td>285835</td>
+<td>2.6419</td>
+<td>2.4997</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000327.1</td>
+<td>107921</td>
+<td>307765</td>
+<td>2.8518</td>
+<td>2.1011</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000328.1</td>
+<td>107814</td>
+<td>1049207</td>
+<td>9.7316</td>
+<td>6.8203</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000333.1</td>
+<td>107509</td>
+<td>1383244</td>
+<td>12.8663</td>
+<td>11.0562</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000331.1</td>
+<td>107086</td>
+<td>1474351</td>
+<td>13.7679</td>
+<td>7.3329</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000329.1</td>
+<td>107035</td>
+<td>7667197</td>
+<td>71.6326</td>
+<td>193.7273</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000332.1</td>
+<td>106706</td>
+<td>65230</td>
+<td>0.6113</td>
+<td>1.8729</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000330.1</td>
+<td>106505</td>
+<td>2556220</td>
+<td>24.0009</td>
+<td>15.2184</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000335.1</td>
+<td>106505</td>
+<td>1415961</td>
+<td>13.2948</td>
+<td>12.2671</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000336.1</td>
+<td>106420</td>
+<td>181632</td>
+<td>1.7067</td>
+<td>2.0844</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000334.1</td>
+<td>106289</td>
+<td>442998</td>
+<td>4.1679</td>
+<td>2.8156</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000337.1</td>
+<td>105603</td>
+<td>626265</td>
+<td>5.9304</td>
+<td>4.7278</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000339.1</td>
+<td>104090</td>
+<td>794947</td>
+<td>7.6371</td>
+<td>13.4064</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000340.1</td>
+<td>103905</td>
+<td>343055</td>
+<td>3.3016</td>
+<td>5.1453</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000338.1</td>
+<td>103664</td>
+<td>265829</td>
+<td>2.5643</td>
+<td>2.2089</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000342.1</td>
+<td>103598</td>
+<td>1148522</td>
+<td>11.0863</td>
+<td>8.7981</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000341.1</td>
+<td>103498</td>
+<td>273020</td>
+<td>2.6379</td>
+<td>2.2532</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000343.1</td>
+<td>101981</td>
+<td>759369</td>
+<td>7.4462</td>
+<td>4.8266</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000344.1</td>
+<td>101938</td>
+<td>1463609</td>
+<td>14.3578</td>
+<td>19.6135</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000345.1</td>
+<td>100717</td>
+<td>1014217</td>
+<td>10.07</td>
+<td>6.3142</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000346.1</td>
+<td>99996</td>
+<td>252130</td>
+<td>2.5214</td>
+<td>2.0892</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000348.1</td>
+<td>99169</td>
+<td>982373</td>
+<td>9.906</td>
+<td>7.658</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000347.1</td>
+<td>99057</td>
+<td>887512</td>
+<td>8.9596</td>
+<td>8.2377</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000349.1</td>
+<td>98674</td>
+<td>527108</td>
+<td>5.3419</td>
+<td>5.3651</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000350.1</td>
+<td>97639</td>
+<td>956763</td>
+<td>9.799</td>
+<td>11.6487</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000353.1</td>
+<td>97297</td>
+<td>489570</td>
+<td>5.0317</td>
+<td>4.2804</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000352.1</td>
+<td>97013</td>
+<td>1353221</td>
+<td>13.9489</td>
+<td>15.3762</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000351.1</td>
+<td>96945</td>
+<td>923236</td>
+<td>9.5233</td>
+<td>4.0716</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000355.1</td>
+<td>95730</td>
+<td>251574</td>
+<td>2.628</td>
+<td>2.9499</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000354.1</td>
+<td>95632</td>
+<td>241722</td>
+<td>2.5276</td>
+<td>2.1341</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000358.1</td>
+<td>95443</td>
+<td>637701</td>
+<td>6.6815</td>
+<td>4.9282</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000361.1</td>
+<td>95343</td>
+<td>1467354</td>
+<td>15.3903</td>
+<td>17.0491</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000357.1</td>
+<td>95325</td>
+<td>588881</td>
+<td>6.1776</td>
+<td>3.6247</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000356.1</td>
+<td>95267</td>
+<td>236850</td>
+<td>2.4862</td>
+<td>2.0492</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000359.1</td>
+<td>94890</td>
+<td>196061</td>
+<td>2.0662</td>
+<td>2.6382</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000360.1</td>
+<td>94190</td>
+<td>180116</td>
+<td>1.9123</td>
+<td>2.3625</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000362.1</td>
+<td>93211</td>
+<td>487336</td>
+<td>5.2283</td>
+<td>3.874</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000363.1</td>
+<td>91974</td>
+<td>331139</td>
+<td>3.6004</td>
+<td>5.5673</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000364.1</td>
+<td>91141</td>
+<td>15606</td>
+<td>0.1712</td>
+<td>0.9686</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000365.1</td>
+<td>89968</td>
+<td>1401280</td>
+<td>15.5753</td>
+<td>7.9851</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000366.1</td>
+<td>89649</td>
+<td>415721</td>
+<td>4.6372</td>
+<td>3.3026</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000370.1</td>
+<td>89061</td>
+<td>830498</td>
+<td>9.325</td>
+<td>10.4429</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000368.1</td>
+<td>89008</td>
+<td>87239</td>
+<td>0.9801</td>
+<td>2.0219</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000367.1</td>
+<td>88720</td>
+<td>532216</td>
+<td>5.9988</td>
+<td>3.5778</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000369.1</td>
+<td>88480</td>
+<td>330191</td>
+<td>3.7318</td>
+<td>3.6031</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000372.1</td>
+<td>87954</td>
+<td>403748</td>
+<td>4.5904</td>
+<td>4.626</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000371.1</td>
+<td>87948</td>
+<td>518339</td>
+<td>5.8937</td>
+<td>9.7043</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000373.1</td>
+<td>87860</td>
+<td>503470</td>
+<td>5.7304</td>
+<td>3.6663</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000374.1</td>
+<td>87739</td>
+<td>319233</td>
+<td>3.6384</td>
+<td>3.327</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000375.1</td>
+<td>87657</td>
+<td>202271</td>
+<td>2.3075</td>
+<td>2.0041</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000376.1</td>
+<td>87561</td>
+<td>546673</td>
+<td>6.2433</td>
+<td>4.5142</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000377.1</td>
+<td>87456</td>
+<td>210332</td>
+<td>2.405</td>
+<td>1.9268</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000378.1</td>
+<td>87443</td>
+<td>219380</td>
+<td>2.5088</td>
+<td>2.1128</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000379.1</td>
+<td>87167</td>
+<td>159909</td>
+<td>1.8345</td>
+<td>2.4824</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000380.1</td>
+<td>86674</td>
+<td>1132046</td>
+<td>13.061</td>
+<td>13.6314</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000382.1</td>
+<td>85935</td>
+<td>980756</td>
+<td>11.4128</td>
+<td>9.1859</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000381.1</td>
+<td>85523</td>
+<td>286443</td>
+<td>3.3493</td>
+<td>3.8071</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000383.1</td>
+<td>84836</td>
+<td>120764</td>
+<td>1.4235</td>
+<td>2.4849</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000384.1</td>
+<td>84557</td>
+<td>5136760</td>
+<td>60.7491</td>
+<td>177.4548</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000386.1</td>
+<td>83810</td>
+<td>661323</td>
+<td>7.8907</td>
+<td>5.1168</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000385.1</td>
+<td>83522</td>
+<td>1079743</td>
+<td>12.9276</td>
+<td>7.4059</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000387.1</td>
+<td>82968</td>
+<td>182671</td>
+<td>2.2017</td>
+<td>2.4205</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000390.1</td>
+<td>81134</td>
+<td>898135</td>
+<td>11.0698</td>
+<td>6.284</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000389.1</td>
+<td>81053</td>
+<td>363741</td>
+<td>4.4877</td>
+<td>7.68</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000388.1</td>
+<td>80984</td>
+<td>688261</td>
+<td>8.4987</td>
+<td>6.9246</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000392.1</td>
+<td>80883</td>
+<td>265307</td>
+<td>3.2801</td>
+<td>3.0355</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000394.1</td>
+<td>80865</td>
+<td>324926</td>
+<td>4.0181</td>
+<td>3.6805</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000391.1</td>
+<td>80749</td>
+<td>660760</td>
+<td>8.1829</td>
+<td>6.0423</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000393.1</td>
+<td>79805</td>
+<td>1200348</td>
+<td>15.041</td>
+<td>8.7221</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000395.1</td>
+<td>79531</td>
+<td>801770</td>
+<td>10.0812</td>
+<td>7.8358</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000397.1</td>
+<td>79206</td>
+<td>1544572</td>
+<td>19.5007</td>
+<td>16.2532</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000396.1</td>
+<td>78678</td>
+<td>292116</td>
+<td>3.7128</td>
+<td>3.3515</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000398.1</td>
+<td>78448</td>
+<td>402971</td>
+<td>5.1368</td>
+<td>4.4023</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000399.1</td>
+<td>75671</td>
+<td>705618</td>
+<td>9.3248</td>
+<td>9.2612</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000400.1</td>
+<td>75537</td>
+<td>410177</td>
+<td>5.4301</td>
+<td>3.3983</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000401.1</td>
+<td>74556</td>
+<td>545454</td>
+<td>7.316</td>
+<td>6.0871</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000403.1</td>
+<td>74030</td>
+<td>461185</td>
+<td>6.2297</td>
+<td>3.9549</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000402.1</td>
+<td>74014</td>
+<td>939035</td>
+<td>12.6873</td>
+<td>12.0351</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000404.1</td>
+<td>72413</td>
+<td>184770</td>
+<td>2.5516</td>
+<td>2.5937</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000405.1</td>
+<td>71749</td>
+<td>191191</td>
+<td>2.6647</td>
+<td>2.1265</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000406.1</td>
+<td>70979</td>
+<td>201668</td>
+<td>2.8412</td>
+<td>5.0396</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000407.1</td>
+<td>70873</td>
+<td>173933</td>
+<td>2.4542</td>
+<td>2.0359</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000408.1</td>
+<td>70494</td>
+<td>189886</td>
+<td>2.6936</td>
+<td>2.8209</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000409.1</td>
+<td>70374</td>
+<td>857275</td>
+<td>12.1817</td>
+<td>20.2687</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000410.1</td>
+<td>69492</td>
+<td>407593</td>
+<td>5.8653</td>
+<td>4.591</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000411.1</td>
+<td>69292</td>
+<td>453021</td>
+<td>6.5379</td>
+<td>4.3338</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000412.1</td>
+<td>69198</td>
+<td>168599</td>
+<td>2.4365</td>
+<td>1.9039</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000413.1</td>
+<td>68575</td>
+<td>260962</td>
+<td>3.8055</td>
+<td>4.959</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000415.1</td>
+<td>68423</td>
+<td>510683</td>
+<td>7.4636</td>
+<td>3.4055</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000414.1</td>
+<td>68417</td>
+<td>187300</td>
+<td>2.7376</td>
+<td>2.2179</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000418.1</td>
+<td>67924</td>
+<td>550870</td>
+<td>8.1101</td>
+<td>7.1399</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000416.1</td>
+<td>67725</td>
+<td>29435</td>
+<td>0.4346</td>
+<td>1.381</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000417.1</td>
+<td>66999</td>
+<td>1304580</td>
+<td>19.4716</td>
+<td>9.8098</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000419.1</td>
+<td>66094</td>
+<td>688634</td>
+<td>10.419</td>
+<td>8.6244</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000420.1</td>
+<td>66056</td>
+<td>216163</td>
+<td>3.2724</td>
+<td>3.6036</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000421.1</td>
+<td>64983</td>
+<td>144598</td>
+<td>2.2252</td>
+<td>1.8849</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000422.1</td>
+<td>64483</td>
+<td>114877</td>
+<td>1.7815</td>
+<td>2.6403</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000423.1</td>
+<td>64345</td>
+<td>459109</td>
+<td>7.1351</td>
+<td>8.3447</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000425.1</td>
+<td>64055</td>
+<td>203740</td>
+<td>3.1807</td>
+<td>3.7107</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000424.1</td>
+<td>64047</td>
+<td>156482</td>
+<td>2.4432</td>
+<td>2.9328</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000426.1</td>
+<td>63544</td>
+<td>177482</td>
+<td>2.7931</td>
+<td>2.5601</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000427.1</td>
+<td>63008</td>
+<td>39536</td>
+<td>0.6275</td>
+<td>1.8079</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000428.1</td>
+<td>62760</td>
+<td>829047</td>
+<td>13.2098</td>
+<td>9.1975</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000429.1</td>
+<td>62543</td>
+<td>150059</td>
+<td>2.3993</td>
+<td>4.784</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000430.1</td>
+<td>62446</td>
+<td>137985</td>
+<td>2.2097</td>
+<td>1.9306</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000431.1</td>
+<td>62094</td>
+<td>144500</td>
+<td>2.3271</td>
+<td>1.8277</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000432.1</td>
+<td>61890</td>
+<td>820957</td>
+<td>13.2648</td>
+<td>9.6494</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000433.1</td>
+<td>61817</td>
+<td>164526</td>
+<td>2.6615</td>
+<td>2.2912</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000434.1</td>
+<td>61422</td>
+<td>601879</td>
+<td>9.7991</td>
+<td>7.0122</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000437.1</td>
+<td>61409</td>
+<td>126337</td>
+<td>2.0573</td>
+<td>2.4173</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000435.1</td>
+<td>61306</td>
+<td>617753</td>
+<td>10.0766</td>
+<td>5.3233</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000436.1</td>
+<td>60940</td>
+<td>548721</td>
+<td>9.0043</td>
+<td>6.9302</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000438.1</td>
+<td>60462</td>
+<td>147508</td>
+<td>2.4397</td>
+<td>2.2929</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000442.1</td>
+<td>60333</td>
+<td>652671</td>
+<td>10.8178</td>
+<td>7.3978</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000443.1</td>
+<td>60034</td>
+<td>248765</td>
+<td>4.1437</td>
+<td>4.2462</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000441.1</td>
+<td>60023</td>
+<td>324041</td>
+<td>5.3986</td>
+<td>5.8506</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000439.1</td>
+<td>60020</td>
+<td>903613</td>
+<td>15.0552</td>
+<td>9.2684</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000440.1</td>
+<td>59969</td>
+<td>870293</td>
+<td>14.5124</td>
+<td>6.9733</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000444.1</td>
+<td>59823</td>
+<td>238085</td>
+<td>3.9798</td>
+<td>4.3959</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000445.1</td>
+<td>59440</td>
+<td>1621614</td>
+<td>27.2815</td>
+<td>26.0435</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000446.1</td>
+<td>59227</td>
+<td>341853</td>
+<td>5.7719</td>
+<td>4.5293</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000449.1</td>
+<td>59178</td>
+<td>81251</td>
+<td>1.373</td>
+<td>2.9072</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000447.1</td>
+<td>59116</td>
+<td>1019554</td>
+<td>17.2467</td>
+<td>9.5859</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000448.1</td>
+<td>59035</td>
+<td>597406</td>
+<td>10.1195</td>
+<td>4.3724</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000450.1</td>
+<td>58994</td>
+<td>265489</td>
+<td>4.5003</td>
+<td>3.5551</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000451.1</td>
+<td>58463</td>
+<td>692288</td>
+<td>11.8415</td>
+<td>7.7085</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000452.1</td>
+<td>57834</td>
+<td>166150</td>
+<td>2.8729</td>
+<td>2.452</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000454.1</td>
+<td>57681</td>
+<td>281324</td>
+<td>4.8772</td>
+<td>5.6337</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000456.1</td>
+<td>57480</td>
+<td>1365278</td>
+<td>23.7522</td>
+<td>12.2875</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000453.1</td>
+<td>57451</td>
+<td>139769</td>
+<td>2.4328</td>
+<td>2.5331</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000455.1</td>
+<td>57310</td>
+<td>451826</td>
+<td>7.8839</td>
+<td>4.1216</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000457.1</td>
+<td>57036</td>
+<td>680226</td>
+<td>11.9263</td>
+<td>15.1478</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000458.1</td>
+<td>56767</td>
+<td>114953</td>
+<td>2.025</td>
+<td>1.8452</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000459.1</td>
+<td>56625</td>
+<td>472352</td>
+<td>8.3418</td>
+<td>5.9055</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000460.1</td>
+<td>56350</td>
+<td>346725</td>
+<td>6.1531</td>
+<td>4.0716</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000461.1</td>
+<td>55731</td>
+<td>271053</td>
+<td>4.8636</td>
+<td>3.678</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000462.1</td>
+<td>54653</td>
+<td>62614</td>
+<td>1.1457</td>
+<td>2.622</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000463.1</td>
+<td>54415</td>
+<td>135363</td>
+<td>2.4876</td>
+<td>1.9553</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000464.1</td>
+<td>54248</td>
+<td>206243</td>
+<td>3.8019</td>
+<td>4.3913</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000465.1</td>
+<td>54135</td>
+<td>918212</td>
+<td>16.9615</td>
+<td>17.3013</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000466.1</td>
+<td>54106</td>
+<td>232908</td>
+<td>4.3047</td>
+<td>7.1029</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000467.1</td>
+<td>54098</td>
+<td>145046</td>
+<td>2.6812</td>
+<td>2.4082</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000468.1</td>
+<td>53463</td>
+<td>226988</td>
+<td>4.2457</td>
+<td>9.0196</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000469.1</td>
+<td>53384</td>
+<td>558357</td>
+<td>10.4593</td>
+<td>5.9462</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000470.1</td>
+<td>53134</td>
+<td>240206</td>
+<td>4.5208</td>
+<td>4.069</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000471.1</td>
+<td>52784</td>
+<td>749747</td>
+<td>14.2041</td>
+<td>7.2503</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000473.1</td>
+<td>52685</td>
+<td>1090393</td>
+<td>20.6965</td>
+<td>10.4954</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000472.1</td>
+<td>52639</td>
+<td>45365</td>
+<td>0.8618</td>
+<td>2.2842</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000474.1</td>
+<td>52297</td>
+<td>523402</td>
+<td>10.0083</td>
+<td>10.2549</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000475.1</td>
+<td>51844</td>
+<td>54794</td>
+<td>1.0569</td>
+<td>5.5934</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000476.1</td>
+<td>51338</td>
+<td>1028879</td>
+<td>20.0413</td>
+<td>16.3142</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000478.1</td>
+<td>51159</td>
+<td>106802</td>
+<td>2.0876</td>
+<td>2.1351</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000479.1</td>
+<td>51071</td>
+<td>354286</td>
+<td>6.9371</td>
+<td>8.5794</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000477.1</td>
+<td>50941</td>
+<td>248096</td>
+<td>4.8703</td>
+<td>4.6884</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000480.1</td>
+<td>50388</td>
+<td>405816</td>
+<td>8.0538</td>
+<td>4.0294</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000481.1</td>
+<td>50201</td>
+<td>428000</td>
+<td>8.5257</td>
+<td>4.1237</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000483.1</td>
+<td>49872</td>
+<td>303582</td>
+<td>6.0872</td>
+<td>6.3899</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000482.1</td>
+<td>49869</td>
+<td>714000</td>
+<td>14.3175</td>
+<td>6.2502</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000484.1</td>
+<td>49787</td>
+<td>90749</td>
+<td>1.8227</td>
+<td>2.0653</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000485.1</td>
+<td>49590</td>
+<td>520676</td>
+<td>10.4996</td>
+<td>11.312</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000486.1</td>
+<td>49434</td>
+<td>518609</td>
+<td>10.4909</td>
+<td>7.6185</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000488.1</td>
+<td>49322</td>
+<td>239734</td>
+<td>4.8606</td>
+<td>3.4641</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000487.1</td>
+<td>49276</td>
+<td>650089</td>
+<td>13.1928</td>
+<td>5.833</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000489.1</td>
+<td>48870</td>
+<td>276728</td>
+<td>5.6625</td>
+<td>4.0985</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000490.1</td>
+<td>48666</td>
+<td>462062</td>
+<td>9.4946</td>
+<td>5.4861</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000493.1</td>
+<td>48666</td>
+<td>121245</td>
+<td>2.4914</td>
+<td>1.8371</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000492.1</td>
+<td>48645</td>
+<td>166908</td>
+<td>3.4311</td>
+<td>2.9915</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000491.1</td>
+<td>48505</td>
+<td>689904</td>
+<td>14.2234</td>
+<td>8.9561</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000494.1</td>
+<td>48087</td>
+<td>352755</td>
+<td>7.3358</td>
+<td>4.0932</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000495.1</td>
+<td>47925</td>
+<td>137504</td>
+<td>2.8691</td>
+<td>2.5034</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000497.1</td>
+<td>47629</td>
+<td>248124</td>
+<td>5.2095</td>
+<td>4.2733</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000501.1</td>
+<td>47313</td>
+<td>226368</td>
+<td>4.7845</td>
+<td>2.7883</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000498.1</td>
+<td>47295</td>
+<td>883079</td>
+<td>18.6717</td>
+<td>10.2927</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000499.1</td>
+<td>47292</td>
+<td>428106</td>
+<td>9.0524</td>
+<td>10.386</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000496.1</td>
+<td>46964</td>
+<td>919525</td>
+<td>19.5794</td>
+<td>15.1464</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000500.1</td>
+<td>46956</td>
+<td>118003</td>
+<td>2.5131</td>
+<td>2.076</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000502.1</td>
+<td>46892</td>
+<td>2207194</td>
+<td>47.0697</td>
+<td>22.0447</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000503.1</td>
+<td>46889</td>
+<td>562310</td>
+<td>11.9924</td>
+<td>8.531</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000504.1</td>
+<td>46791</td>
+<td>362226</td>
+<td>7.7414</td>
+<td>3.9582</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000505.1</td>
+<td>46682</td>
+<td>1578595</td>
+<td>33.8159</td>
+<td>24.2689</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000506.1</td>
+<td>46638</td>
+<td>238388</td>
+<td>5.1115</td>
+<td>5.0562</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000507.1</td>
+<td>46493</td>
+<td>286457</td>
+<td>6.1613</td>
+<td>5.5366</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000508.1</td>
+<td>46339</td>
+<td>174763</td>
+<td>3.7714</td>
+<td>3.2421</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000512.1</td>
+<td>46188</td>
+<td>184101</td>
+<td>3.9859</td>
+<td>4.2634</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000509.1</td>
+<td>46146</td>
+<td>99134</td>
+<td>2.1483</td>
+<td>2.4569</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000515.1</td>
+<td>45949</td>
+<td>171536</td>
+<td>3.7332</td>
+<td>4.9253</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000511.1</td>
+<td>45917</td>
+<td>370878</td>
+<td>8.0771</td>
+<td>5.5444</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000510.1</td>
+<td>45864</td>
+<td>298872</td>
+<td>6.5165</td>
+<td>11.3429</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000513.1</td>
+<td>45518</td>
+<td>98486</td>
+<td>2.1637</td>
+<td>1.7808</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000514.1</td>
+<td>45386</td>
+<td>295461</td>
+<td>6.51</td>
+<td>4.1845</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000516.1</td>
+<td>45074</td>
+<td>166570</td>
+<td>3.6955</td>
+<td>3.9119</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000517.1</td>
+<td>44590</td>
+<td>66238</td>
+<td>1.4855</td>
+<td>1.8601</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000518.1</td>
+<td>44525</td>
+<td>398294</td>
+<td>8.9454</td>
+<td>23.0481</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000519.1</td>
+<td>44141</td>
+<td>489281</td>
+<td>11.0845</td>
+<td>9.4178</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000523.1</td>
+<td>43959</td>
+<td>821648</td>
+<td>18.6912</td>
+<td>11.4952</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000520.1</td>
+<td>43714</td>
+<td>793685</td>
+<td>18.1563</td>
+<td>25.2133</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000521.1</td>
+<td>43594</td>
+<td>410687</td>
+<td>9.4207</td>
+<td>4.533</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000522.1</td>
+<td>43512</td>
+<td>338234</td>
+<td>7.7733</td>
+<td>3.7433</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000524.1</td>
+<td>43349</td>
+<td>102692</td>
+<td>2.369</td>
+<td>1.8922</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000525.1</td>
+<td>43255</td>
+<td>1872207</td>
+<td>43.283</td>
+<td>24.7158</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000526.1</td>
+<td>43197</td>
+<td>97059</td>
+<td>2.2469</td>
+<td>1.7627</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000529.1</td>
+<td>43045</td>
+<td>379869</td>
+<td>8.8249</td>
+<td>5.8251</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000527.1</td>
+<td>42945</td>
+<td>105930</td>
+<td>2.4666</td>
+<td>2.0951</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000528.1</td>
+<td>42884</td>
+<td>943254</td>
+<td>21.9955</td>
+<td>11.7648</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000531.1</td>
+<td>42842</td>
+<td>333836</td>
+<td>7.7923</td>
+<td>9.5244</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000530.1</td>
+<td>42701</td>
+<td>112344</td>
+<td>2.6309</td>
+<td>2.4546</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000532.1</td>
+<td>42128</td>
+<td>752033</td>
+<td>17.8511</td>
+<td>8.9092</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000533.1</td>
+<td>42124</td>
+<td>437659</td>
+<td>10.3898</td>
+<td>12.8516</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000534.1</td>
+<td>41347</td>
+<td>120024</td>
+<td>2.9028</td>
+<td>2.5033</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000536.1</td>
+<td>41304</td>
+<td>69519</td>
+<td>1.6831</td>
+<td>2.5987</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000535.1</td>
+<td>41218</td>
+<td>190537</td>
+<td>4.6227</td>
+<td>3.1792</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000537.1</td>
+<td>41001</td>
+<td>768164</td>
+<td>18.7353</td>
+<td>10.0109</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000538.1</td>
+<td>40876</td>
+<td>632970</td>
+<td>15.4851</td>
+<td>7.8581</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000539.1</td>
+<td>40797</td>
+<td>355048</td>
+<td>8.7028</td>
+<td>5.0412</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000540.1</td>
+<td>40761</td>
+<td>1239989</td>
+<td>30.421</td>
+<td>33.9862</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000541.1</td>
+<td>40456</td>
+<td>536566</td>
+<td>13.263</td>
+<td>18.0752</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000543.1</td>
+<td>40411</td>
+<td>320593</td>
+<td>7.9333</td>
+<td>6.4045</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000542.1</td>
+<td>40378</td>
+<td>98805</td>
+<td>2.447</td>
+<td>2.2083</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000544.1</td>
+<td>40281</td>
+<td>555455</td>
+<td>13.7895</td>
+<td>6.8448</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000549.1</td>
+<td>40212</td>
+<td>434111</td>
+<td>10.7956</td>
+<td>6.3198</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000545.1</td>
+<td>40083</td>
+<td>162452</td>
+<td>4.0529</td>
+<td>10.6215</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000546.1</td>
+<td>40079</td>
+<td>270296</td>
+<td>6.7441</td>
+<td>3.9089</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000547.1</td>
+<td>40040</td>
+<td>13236</td>
+<td>0.3306</td>
+<td>0.9756</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000548.1</td>
+<td>40003</td>
+<td>83665</td>
+<td>2.0915</td>
+<td>3.8937</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000550.1</td>
+<td>39708</td>
+<td>774736</td>
+<td>19.5108</td>
+<td>11.1759</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000551.1</td>
+<td>39278</td>
+<td>225423</td>
+<td>5.7392</td>
+<td>3.687</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000552.1</td>
+<td>39244</td>
+<td>257365</td>
+<td>6.5581</td>
+<td>4.4922</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000554.1</td>
+<td>39146</td>
+<td>114095</td>
+<td>2.9146</td>
+<td>2.4922</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000555.1</td>
+<td>39016</td>
+<td>174356</td>
+<td>4.4688</td>
+<td>6.0116</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000553.1</td>
+<td>38983</td>
+<td>154311</td>
+<td>3.9584</td>
+<td>3.0115</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000556.1</td>
+<td>38755</td>
+<td>360396</td>
+<td>9.2993</td>
+<td>4.5932</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000557.1</td>
+<td>38573</td>
+<td>113318</td>
+<td>2.9378</td>
+<td>6.2092</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000560.1</td>
+<td>38429</td>
+<td>149804</td>
+<td>3.8982</td>
+<td>3.2009</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000559.1</td>
+<td>38292</td>
+<td>154912</td>
+<td>4.0455</td>
+<td>4.9367</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000561.1</td>
+<td>38214</td>
+<td>240346</td>
+<td>6.2895</td>
+<td>4.842</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000562.1</td>
+<td>37848</td>
+<td>260896</td>
+<td>6.8933</td>
+<td>4.7829</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000558.1</td>
+<td>37796</td>
+<td>594421</td>
+<td>15.7271</td>
+<td>16.6481</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000568.1</td>
+<td>37762</td>
+<td>46088</td>
+<td>1.2205</td>
+<td>2.2595</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000563.1</td>
+<td>37725</td>
+<td>410944</td>
+<td>10.8931</td>
+<td>6.3524</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000565.1</td>
+<td>37659</td>
+<td>625232</td>
+<td>16.6025</td>
+<td>13.4987</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000566.1</td>
+<td>37567</td>
+<td>212262</td>
+<td>5.6502</td>
+<td>5.121</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000564.1</td>
+<td>37528</td>
+<td>474589</td>
+<td>12.6463</td>
+<td>6.9383</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000567.1</td>
+<td>37431</td>
+<td>140242</td>
+<td>3.7467</td>
+<td>2.8665</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000569.1</td>
+<td>37360</td>
+<td>59384</td>
+<td>1.5895</td>
+<td>2.813</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000570.1</td>
+<td>37331</td>
+<td>96539632</td>
+<td>2,586.0446</td>
+<td>184.4993</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000571.1</td>
+<td>37330</td>
+<td>116890</td>
+<td>3.1313</td>
+<td>5.2451</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000572.1</td>
+<td>37237</td>
+<td>151393</td>
+<td>4.0657</td>
+<td>5.3924</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000573.1</td>
+<td>37121</td>
+<td>73046</td>
+<td>1.9678</td>
+<td>2.1485</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000574.1</td>
+<td>37021</td>
+<td>77081</td>
+<td>2.0821</td>
+<td>2.0128</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000575.1</td>
+<td>36932</td>
+<td>456495</td>
+<td>12.3604</td>
+<td>7.8764</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000576.1</td>
+<td>36892</td>
+<td>1021090</td>
+<td>27.6778</td>
+<td>18.3935</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000578.1</td>
+<td>36876</td>
+<td>23801</td>
+<td>0.6454</td>
+<td>1.8075</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000577.1</td>
+<td>36810</td>
+<td>96056</td>
+<td>2.6095</td>
+<td>2.2758</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000579.1</td>
+<td>36672</td>
+<td>72570</td>
+<td>1.9789</td>
+<td>4.3692</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000580.1</td>
+<td>36399</td>
+<td>110848</td>
+<td>3.0454</td>
+<td>2.69</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000581.1</td>
+<td>36352</td>
+<td>253409</td>
+<td>6.971</td>
+<td>7.345</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000582.1</td>
+<td>36295</td>
+<td>221046</td>
+<td>6.0903</td>
+<td>12.9517</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000583.1</td>
+<td>36134</td>
+<td>267588</td>
+<td>7.4054</td>
+<td>10.5266</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000584.1</td>
+<td>36034</td>
+<td>133366</td>
+<td>3.7011</td>
+<td>3.7197</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000585.1</td>
+<td>35907</td>
+<td>69096</td>
+<td>1.9243</td>
+<td>2.8216</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000586.1</td>
+<td>35790</td>
+<td>202798</td>
+<td>5.6663</td>
+<td>6.0459</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000587.1</td>
+<td>35128</td>
+<td>106138</td>
+<td>3.0215</td>
+<td>3.572</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000591.1</td>
+<td>35124</td>
+<td>15614</td>
+<td>0.4445</td>
+<td>1.2697</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000588.1</td>
+<td>35119</td>
+<td>667336</td>
+<td>19.0021</td>
+<td>16.9418</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000589.1</td>
+<td>35104</td>
+<td>351631</td>
+<td>10.0168</td>
+<td>6.7475</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000590.1</td>
+<td>34945</td>
+<td>99103</td>
+<td>2.836</td>
+<td>3.1275</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000592.1</td>
+<td>34758</td>
+<td>726964</td>
+<td>20.915</td>
+<td>75.9008</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000593.1</td>
+<td>34448</td>
+<td>466307</td>
+<td>13.5365</td>
+<td>12.7754</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000594.1</td>
+<td>34223</td>
+<td>254563</td>
+<td>7.4384</td>
+<td>6.2886</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000595.1</td>
+<td>34185</td>
+<td>117741</td>
+<td>3.4442</td>
+<td>4.7803</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000600.1</td>
+<td>33743</td>
+<td>567795</td>
+<td>16.827</td>
+<td>21.7056</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000596.1</td>
+<td>33731</td>
+<td>75341</td>
+<td>2.2336</td>
+<td>1.7589</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000597.1</td>
+<td>33689</td>
+<td>132894</td>
+<td>3.9447</td>
+<td>4.5864</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000598.1</td>
+<td>33689</td>
+<td>188382</td>
+<td>5.5918</td>
+<td>3.8309</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000601.1</td>
+<td>33559</td>
+<td>79252</td>
+<td>2.3616</td>
+<td>2.0778</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000599.1</td>
+<td>33538</td>
+<td>114222</td>
+<td>3.4057</td>
+<td>3.2895</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000602.1</td>
+<td>33365</td>
+<td>499520</td>
+<td>14.9714</td>
+<td>8.7334</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000603.1</td>
+<td>33216</td>
+<td>142723</td>
+<td>4.2968</td>
+<td>6.8192</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000604.1</td>
+<td>33008</td>
+<td>38863</td>
+<td>1.1774</td>
+<td>3.6722</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000605.1</td>
+<td>32906</td>
+<td>893984</td>
+<td>27.1678</td>
+<td>12.7596</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000606.1</td>
+<td>32750</td>
+<td>75939</td>
+<td>2.3187</td>
+<td>1.8205</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000607.1</td>
+<td>32366</td>
+<td>256499</td>
+<td>7.925</td>
+<td>14.5511</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000608.1</td>
+<td>32249</td>
+<td>191292</td>
+<td>5.9317</td>
+<td>5.2736</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000609.1</td>
+<td>32182</td>
+<td>211487</td>
+<td>6.5716</td>
+<td>4.3169</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000610.1</td>
+<td>32163</td>
+<td>345417</td>
+<td>10.7396</td>
+<td>16.8235</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000611.1</td>
+<td>32002</td>
+<td>104184</td>
+<td>3.2555</td>
+<td>3.0865</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000612.1</td>
+<td>31718</td>
+<td>73038</td>
+<td>2.3027</td>
+<td>2.0637</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000613.1</td>
+<td>31504</td>
+<td>277048</td>
+<td>8.7941</td>
+<td>12.9061</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000614.1</td>
+<td>31336</td>
+<td>82491</td>
+<td>2.6325</td>
+<td>2.0417</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000615.1</td>
+<td>31321</td>
+<td>140026</td>
+<td>4.4707</td>
+<td>4.3136</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000616.1</td>
+<td>31223</td>
+<td>76717</td>
+<td>2.4571</td>
+<td>1.8272</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000617.1</td>
+<td>31105</td>
+<td>107045</td>
+<td>3.4414</td>
+<td>2.6719</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000619.1</td>
+<td>31017</td>
+<td>553831</td>
+<td>17.8557</td>
+<td>10.3983</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000618.1</td>
+<td>30908</td>
+<td>169412</td>
+<td>5.4812</td>
+<td>5.0399</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000620.1</td>
+<td>30820</td>
+<td>641758</td>
+<td>20.8228</td>
+<td>15.3801</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000621.1</td>
+<td>30703</td>
+<td>61239</td>
+<td>1.9946</td>
+<td>1.9508</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000622.1</td>
+<td>30612</td>
+<td>227068</td>
+<td>7.4176</td>
+<td>8.0389</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000623.1</td>
+<td>30479</td>
+<td>70280</td>
+<td>2.3058</td>
+<td>4.1503</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000624.1</td>
+<td>30370</td>
+<td>404386</td>
+<td>13.3153</td>
+<td>10.7716</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000626.1</td>
+<td>30127</td>
+<td>404141</td>
+<td>13.4146</td>
+<td>6.8334</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000625.1</td>
+<td>30075</td>
+<td>1207141</td>
+<td>40.1377</td>
+<td>15.7221</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000627.1</td>
+<td>29989</td>
+<td>167163</td>
+<td>5.5741</td>
+<td>5.9536</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000628.1</td>
+<td>29959</td>
+<td>43011</td>
+<td>1.4357</td>
+<td>1.9464</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000629.1</td>
+<td>29479</td>
+<td>41543</td>
+<td>1.4092</td>
+<td>2.87</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000630.1</td>
+<td>29392</td>
+<td>126310</td>
+<td>4.2974</td>
+<td>2.7567</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000631.1</td>
+<td>29116</td>
+<td>119271</td>
+<td>4.0964</td>
+<td>2.8044</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000632.1</td>
+<td>29108</td>
+<td>111982</td>
+<td>3.8471</td>
+<td>4.2732</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000633.1</td>
+<td>29078</td>
+<td>288413</td>
+<td>9.9186</td>
+<td>7.6243</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000635.1</td>
+<td>29059</td>
+<td>178659</td>
+<td>6.1481</td>
+<td>3.8586</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000634.1</td>
+<td>29043</td>
+<td>45105</td>
+<td>1.553</td>
+<td>1.8922</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000636.1</td>
+<td>28967</td>
+<td>126758</td>
+<td>4.3759</td>
+<td>4.2361</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000637.1</td>
+<td>28844</td>
+<td>556241</td>
+<td>19.2845</td>
+<td>14.1472</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000638.1</td>
+<td>28763</td>
+<td>27239</td>
+<td>0.947</td>
+<td>2.3632</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000639.1</td>
+<td>28560</td>
+<td>138710</td>
+<td>4.8568</td>
+<td>5.027</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000640.1</td>
+<td>28488</td>
+<td>66940</td>
+<td>2.3498</td>
+<td>1.7357</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000641.1</td>
+<td>28386</td>
+<td>81571</td>
+<td>2.8736</td>
+<td>2.527</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000642.1</td>
+<td>28287</td>
+<td>169359</td>
+<td>5.9872</td>
+<td>6.5918</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000644.1</td>
+<td>28023</td>
+<td>591121</td>
+<td>21.0941</td>
+<td>19.2131</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000643.1</td>
+<td>28011</td>
+<td>76602</td>
+<td>2.7347</td>
+<td>2.1892</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000645.1</td>
+<td>27979</td>
+<td>90383</td>
+<td>3.2304</td>
+<td>2.9385</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000647.1</td>
+<td>27816</td>
+<td>288732</td>
+<td>10.3801</td>
+<td>7.267</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000646.1</td>
+<td>27658</td>
+<td>175398</td>
+<td>6.3417</td>
+<td>5.125</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000648.1</td>
+<td>27612</td>
+<td>40748</td>
+<td>1.4757</td>
+<td>1.7245</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000650.1</td>
+<td>27564</td>
+<td>148678</td>
+<td>5.3939</td>
+<td>4.3682</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000654.1</td>
+<td>27538</td>
+<td>418710</td>
+<td>15.2048</td>
+<td>12.0743</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000649.1</td>
+<td>27532</td>
+<td>210403</td>
+<td>7.6421</td>
+<td>5.3429</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000652.1</td>
+<td>27447</td>
+<td>257433</td>
+<td>9.3793</td>
+<td>7.488</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000651.1</td>
+<td>27341</td>
+<td>328868</td>
+<td>12.0284</td>
+<td>7.4908</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000653.1</td>
+<td>27214</td>
+<td>221346</td>
+<td>8.1335</td>
+<td>5.6294</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000655.1</td>
+<td>26707</td>
+<td>208501</td>
+<td>7.807</td>
+<td>7.1657</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000656.1</td>
+<td>26598</td>
+<td>210902</td>
+<td>7.9292</td>
+<td>5.765</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000657.1</td>
+<td>26342</td>
+<td>297556</td>
+<td>11.2959</td>
+<td>12.2528</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000660.1</td>
+<td>25946</td>
+<td>87860</td>
+<td>3.3863</td>
+<td>4.6256</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000658.1</td>
+<td>25903</td>
+<td>188502</td>
+<td>7.2772</td>
+<td>4.6579</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000659.1</td>
+<td>25862</td>
+<td>825667</td>
+<td>31.9259</td>
+<td>8.7033</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000661.1</td>
+<td>25555</td>
+<td>452150</td>
+<td>17.6932</td>
+<td>13.0514</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000662.1</td>
+<td>25463</td>
+<td>423659</td>
+<td>16.6382</td>
+<td>15.9055</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000663.1</td>
+<td>25336</td>
+<td>64659</td>
+<td>2.5521</td>
+<td>1.9673</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000664.1</td>
+<td>25209</td>
+<td>68632</td>
+<td>2.7225</td>
+<td>2.1541</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000665.1</td>
+<td>25111</td>
+<td>124491</td>
+<td>4.9576</td>
+<td>6.0006</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000666.1</td>
+<td>25036</td>
+<td>122260</td>
+<td>4.8834</td>
+<td>2.9817</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000668.1</td>
+<td>24887</td>
+<td>201012</td>
+<td>8.077</td>
+<td>6.172</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000667.1</td>
+<td>24869</td>
+<td>141608</td>
+<td>5.6942</td>
+<td>6.6556</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000669.1</td>
+<td>24817</td>
+<td>59145</td>
+<td>2.3832</td>
+<td>1.6685</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000670.1</td>
+<td>24724</td>
+<td>190751</td>
+<td>7.7152</td>
+<td>8.0111</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000671.1</td>
+<td>24475</td>
+<td>126320</td>
+<td>5.1612</td>
+<td>5.5575</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000672.1</td>
+<td>24226</td>
+<td>163022</td>
+<td>6.7292</td>
+<td>3.1062</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000673.1</td>
+<td>24082</td>
+<td>49031</td>
+<td>2.036</td>
+<td>2.5596</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000674.1</td>
+<td>24003</td>
+<td>99228</td>
+<td>4.134</td>
+<td>3.9366</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000676.1</td>
+<td>23981</td>
+<td>66375</td>
+<td>2.7678</td>
+<td>2.3556</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000675.1</td>
+<td>23973</td>
+<td>91720</td>
+<td>3.826</td>
+<td>3.422</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000677.1</td>
+<td>23940</td>
+<td>169265</td>
+<td>7.0704</td>
+<td>5.9939</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000679.1</td>
+<td>23607</td>
+<td>113638</td>
+<td>4.8137</td>
+<td>5.9446</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000678.1</td>
+<td>23581</td>
+<td>152676</td>
+<td>6.4745</td>
+<td>3.4454</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000680.1</td>
+<td>22926</td>
+<td>219758</td>
+<td>9.5855</td>
+<td>5.0285</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000684.1</td>
+<td>22812</td>
+<td>93965</td>
+<td>4.1191</td>
+<td>3.1333</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000682.1</td>
+<td>22781</td>
+<td>98535</td>
+<td>4.3253</td>
+<td>3.6403</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000681.1</td>
+<td>22738</td>
+<td>461757</td>
+<td>20.3077</td>
+<td>24.4258</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000683.1</td>
+<td>22676</td>
+<td>242172</td>
+<td>10.6797</td>
+<td>4.7874</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000685.1</td>
+<td>22663</td>
+<td>139422</td>
+<td>6.152</td>
+<td>5.2179</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000687.1</td>
+<td>22613</td>
+<td>75476</td>
+<td>3.3377</td>
+<td>4.5754</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000686.1</td>
+<td>22598</td>
+<td>68650</td>
+<td>3.0379</td>
+<td>2.8831</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000689.1</td>
+<td>22544</td>
+<td>12478</td>
+<td>0.5535</td>
+<td>1.2835</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000688.1</td>
+<td>22533</td>
+<td>387436</td>
+<td>17.1942</td>
+<td>73.9954</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000690.1</td>
+<td>22410</td>
+<td>57631</td>
+<td>2.5717</td>
+<td>5.1331</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000691.1</td>
+<td>22410</td>
+<td>146967</td>
+<td>6.5581</td>
+<td>7.4621</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000692.1</td>
+<td>22340</td>
+<td>55147</td>
+<td>2.4685</td>
+<td>2.1449</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000693.1</td>
+<td>22167</td>
+<td>31455</td>
+<td>1.419</td>
+<td>3.458</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000694.1</td>
+<td>22068</td>
+<td>941110</td>
+<td>42.6459</td>
+<td>63.9593</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000695.1</td>
+<td>21989</td>
+<td>198093</td>
+<td>9.0087</td>
+<td>8.0962</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000697.1</td>
+<td>21945</td>
+<td>206446</td>
+<td>9.4074</td>
+<td>11.4136</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000696.1</td>
+<td>21921</td>
+<td>187072</td>
+<td>8.5339</td>
+<td>5.1534</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000698.1</td>
+<td>21855</td>
+<td>3907</td>
+<td>0.1788</td>
+<td>0.5683</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000699.1</td>
+<td>21807</td>
+<td>69319</td>
+<td>3.1787</td>
+<td>2.8338</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000700.1</td>
+<td>21708</td>
+<td>161350</td>
+<td>7.4327</td>
+<td>9.0493</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000701.1</td>
+<td>21692</td>
+<td>75392</td>
+<td>3.4756</td>
+<td>4.0533</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000703.1</td>
+<td>21650</td>
+<td>112371</td>
+<td>5.1903</td>
+<td>5.513</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000702.1</td>
+<td>21592</td>
+<td>370367</td>
+<td>17.153</td>
+<td>9.5223</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000704.1</td>
+<td>21590</td>
+<td>567527</td>
+<td>26.2866</td>
+<td>31.1419</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000706.1</td>
+<td>21534</td>
+<td>98929</td>
+<td>4.5941</td>
+<td>4.9409</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000705.1</td>
+<td>21510</td>
+<td>278172</td>
+<td>12.9322</td>
+<td>5.7345</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000707.1</td>
+<td>21395</td>
+<td>36542</td>
+<td>1.708</td>
+<td>2.5522</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000708.1</td>
+<td>21108</td>
+<td>108264</td>
+<td>5.1291</td>
+<td>3.6661</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000709.1</td>
+<td>21055</td>
+<td>311860</td>
+<td>14.8117</td>
+<td>14.6923</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000710.1</td>
+<td>20962</td>
+<td>328728</td>
+<td>15.6821</td>
+<td>6.1473</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000711.1</td>
+<td>20954</td>
+<td>111334</td>
+<td>5.3133</td>
+<td>4.3601</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000712.1</td>
+<td>20918</td>
+<td>28172</td>
+<td>1.3468</td>
+<td>2.0802</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000713.1</td>
+<td>20517</td>
+<td>134005</td>
+<td>6.5314</td>
+<td>3.487</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000714.1</td>
+<td>20446</td>
+<td>39294</td>
+<td>1.9218</td>
+<td>1.887</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000715.1</td>
+<td>20278</td>
+<td>114801</td>
+<td>5.6614</td>
+<td>4.6111</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000716.1</td>
+<td>20244</td>
+<td>118631</td>
+<td>5.8601</td>
+<td>5.7452</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000717.1</td>
+<td>20079</td>
+<td>325266</td>
+<td>16.1993</td>
+<td>5.4292</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000719.1</td>
+<td>19046</td>
+<td>64879</td>
+<td>3.4064</td>
+<td>3.1114</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000718.1</td>
+<td>18609</td>
+<td>433781</td>
+<td>23.3103</td>
+<td>7.4134</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000720.1</td>
+<td>18608</td>
+<td>62544</td>
+<td>3.3611</td>
+<td>4.3576</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000721.1</td>
+<td>18471</td>
+<td>142593</td>
+<td>7.7198</td>
+<td>5.6622</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000722.1</td>
+<td>18378</td>
+<td>168280</td>
+<td>9.1566</td>
+<td>5.2506</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000723.1</td>
+<td>18137</td>
+<td>87939</td>
+<td>4.8486</td>
+<td>3.8125</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000724.1</td>
+<td>17166</td>
+<td>41295</td>
+<td>2.4056</td>
+<td>4.7699</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000725.1</td>
+<td>17030</td>
+<td>28882</td>
+<td>1.6959</td>
+<td>1.6964</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000726.1</td>
+<td>17020</td>
+<td>39335</td>
+<td>2.3111</td>
+<td>1.7727</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000727.1</td>
+<td>15031</td>
+<td>93920</td>
+<td>6.2484</td>
+<td>8.0402</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000728.1</td>
+<td>13735</td>
+<td>93381</td>
+<td>6.7988</td>
+<td>5.0701</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000729.1</td>
+<td>13290</td>
+<td>27567</td>
+<td>2.0743</td>
+<td>1.8062</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000730.1</td>
+<td>10496</td>
+<td>22914</td>
+<td>2.1831</td>
+<td>1.6743</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000731.1</td>
+<td>10389</td>
+<td>19428</td>
+<td>1.8701</td>
+<td>1.4895</td>
+</tr>
+</table>
+</div>
+
+</div>
+</div> <!-- summary section -->
+
+
+
+<div class=section>
+
+<h2>Coverage across reference<a class="headerlink" name="genome_coverage_across_reference.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_coverage_across_reference.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Coverage Histogram<a class="headerlink" name="genome_coverage_histogram.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_coverage_histogram.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Coverage Histogram (0-50X)<a class="headerlink" name="genome_coverage_0to50_histogram.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_coverage_0to50_histogram.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Genome Fraction Coverage<a class="headerlink" name="genome_coverage_quotes.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_coverage_quotes.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Duplication Rate Histogram<a class="headerlink" name="genome_uniq_read_starts_histogram.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_uniq_read_starts_histogram.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Mapped Reads Nucleotide Content<a class="headerlink" name="genome_reads_content_per_read_position.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_reads_content_per_read_position.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Mapped Reads GC-content Distribution<a class="headerlink" name="genome_gc_content_per_window.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_gc_content_per_window.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Mapped Reads Clipping Profile<a class="headerlink" name="genome_reads_clipping_profile.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_reads_clipping_profile.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Homopolymer Indels<a class="headerlink" name="genome_homopolymer_indels" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_homopolymer_indels.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Mapping Quality Across Reference<a class="headerlink" name="genome_mapping_quality_across_reference.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_mapping_quality_across_reference.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Mapping Quality Histogram<a class="headerlink" name="genome_mapping_quality_histogram.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_mapping_quality_histogram.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Insert Size Across Reference<a class="headerlink" name="genome_insert_size_across_reference.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_insert_size_across_reference.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Insert Size Histogram<a class="headerlink" name="genome_insert_size_histogram.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_insert_size_histogram.png"></div>
+
+</div><!-- graph section -->
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="sidebar">
+<h3>Contents</h3>
+<li class="toctree-l1"><a class="reference internal" href="#input">Input data & parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_coverage_across_reference.png">Coverage across reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_coverage_histogram.png">Coverage Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_coverage_0to50_histogram.png">Coverage Histogram (0-50X)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_coverage_quotes.png">Genome Fraction Coverage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_uniq_read_starts_histogram.png">Duplication Rate Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_reads_content_per_read_position.png">Mapped Reads Nucleotide Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_gc_content_per_window.png">Mapped Reads GC-content Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_reads_clipping_profile.png">Mapped Reads Clipping Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_homopolymer_indels">Homopolymer Indels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_mapping_quality_across_reference.png">Mapping Quality Across Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_mapping_quality_histogram.png">Mapping Quality Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_insert_size_across_reference.png">Insert Size Across Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_insert_size_histogram.png">Insert Size Histogram</a></li>
+</div> <!-- sidebar -->
+
+<div class="clearer"></div>
+</div>
+
+</div>
+
+
+<div class="footer-wrapper">
+<div class="footer">
+<div class="left">
+<div class="footer">
+2022/08/17 00:46:06
+</div>
+</div>
+<div class="right">
+<div class="footer">
+Generated by QualiMap v.2.2.1
+</div
+</div>
+<div class="clearer"></div>
+</div> <!-- footer -->
+</div>
+</body>
