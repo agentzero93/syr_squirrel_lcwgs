@@ -6,6 +6,7 @@
 *.fa.gz
 *.fasta
 *.bam
+*.cram
 ## ignore fasta, vcf, and bam index files ##
 *.gzi
 *.tbi
