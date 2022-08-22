@@ -48,8 +48,11 @@ Note: I merged the unpaired and paired read alignments (*_merged.bam) prior to d
 Note: Read groups got messed up after merging, so had to use Picard AddOrReplaceReadGroups to fix the read groups.
 
 6) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 47 here).
-7) Second step of the GATK SNP calling pipeline. Run GenomicsDBImport to combine the variants called across each sample (1 database produced for each chromosome; 21 here).
-8) Third and final step of the GATK SNP calling pipeline. Run GenotypeGVCFs to jointly call variants for every sample across all chromosomes (1 gvcf produced for each chromosome; 21 here). After the gvcfs are generated, use Picard to combine all 21 into one large gvcf file.
+
+Note: Only running this pipeline on the 47 Syracuse samples for now. Once the other cities are sequenced, I will run those samples through the pipeline as well.
+
+7) Second step of the GATK SNP calling pipeline. Run GenomicsDBImport to combine the variants called across each sample (1 database produced for each chromosome and unplaced contig; 752 here).
+8) Third and final step of the GATK SNP calling pipeline. Run GenotypeGVCFs to jointly call variants for every sample across all chromosomes and unplaced contigs (1 gvcf produced for each chromosome and unplaced contig; 752 here). After the gvcfs are generated, use Picard to combine all 752 files into one large gvcf file.
 9) Filter the variants called by GATK using bcftools.
 10) Annotate SNPs
 
