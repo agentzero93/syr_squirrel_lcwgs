@@ -38,14 +38,16 @@ Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sc
 
 Note: Aliging unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file (cat 1U.fastq.gz 2U.fastq.gz > UC.fastq.gz), then aligned.
 
-Note: To parallelize, run across multiple nodes with as many threads as possible on your computer(s). Do not try to run multiple alignments on a single node, this will result in a major slow down (see https://www.biostars.org/p/420062/). 
+Note: To parallelize, run across multiple nodes with as many threads as possible on your computer(s). Do not try to run multiple alignments on a single node, this will result in a major slow down (see https://www.biostars.org/p/420062/).
 
 4) Check initial quality of the alignments using QualiMap and MultiQC.
 5) Mark and remove duplicate aligned reads using Picard MarkDuplicates (then verify that duplicates have been removed using QualiMap and MultiQC).
 
 Note: I merged the unpaired and paired read alignments (*_merged.bam) prior to deduplicating the reads using samtools merge.
 
-Note: Read groups got messed up after merging, so had to use Picard AddOrReplaceReadGroups to fix the read groups.
+Note: Use Picard AddOrReplaceReadGroups to fix the read groups if read groups get messed up after merging.
+
+Note: Coverage is not what I was expecting on the assembled chromosomes for the majority of the samples. For the 10x sequencing runs, assembled chromosomes were only covered at around 6-7x, and for the 3x sequencing runs assembled chromosomes were only covered at around 2x. For some reason, the unplaced scaffolds have much higher coverage than the chromosomes (some have crazy high coverage - 1000x+ - most likely due to repetitive sequence?). I tried realignment without these scaffolds included but that only marginally increased coverage on the chromosomes, so it seems this could just be an issue with the genome/species (but I really don't know). I guess we will need to sequence at greater depth than we actually need to get our desired chromosome coverage (eg, sequence at 7-8x effort to get 5x coverage). In any case, I think it's a good idea to not align against the smaller unplaced scaffold as they could have an increased percentage of repetitive sequences (and thereby reduce coverage on the chromosomes), so I used seqkit (https://github.com/shenwei356/seqkit) to remove scaffolds less than 1Mb in the genome file.
 
 6) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 47 here).
 
