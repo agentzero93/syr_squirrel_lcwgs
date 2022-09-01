@@ -50,7 +50,7 @@ Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sc
 ```bash
 
 ```
-Note: Will not align against the smaller unplaced scaffolds as some had crazy high coverages when I ran through this pipeline the first time (possibly reducing coverage on the chromosomes), so I used seqkit (https://github.com/shenwei356/seqkit) to remove scaffolds less than 1Mb in the genome file.
+Note: Will not align against the smaller unplaced scaffolds as some had crazy high coverages when I ran through this pipeline the first time (possibly reducing coverage on the chromosomes), so I used seqkit to remove scaffolds less than 1Mb in the genome file.
 ```bash
 seqkit seq --min-len 1000000 genome.fa.gz > genome_1MBmin.fa.gz
 ```
