@@ -1,5 +1,5 @@
-# Genomic differentiation between urban and rural eastern gray squirrels #
-Repository to house scripts used to analyze low-coverage whole genome sequencing of the eastern gray squirrel (Sciurus carolinensis)
+# Genomic differentiation between urban and rural eastern gray squirrels in Syracuse, NY #
+Repository to house scripts used to analyze low-coverage whole genome sequencing of the eastern gray squirrel (Sciurus carolinensis) in Syracuse, New York.
 
 # Tools used (running list) #
 ### Read data QC ###
