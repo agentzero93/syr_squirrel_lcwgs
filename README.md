@@ -41,24 +41,23 @@ Note: Raw reads look good, just a bit of adapter contamination.
 
 ```
 Note: Reads no longer have adapter contamination.
-
-3) Align the trimmed reads to the reference genome using BWA.
+3) Align the trimmed reads to the reference genome using BWA. e.g., paired-end alignment:
 ```bash
-
+bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_1P.fastq.gz SCCA1009_trimmed_2P.fastq.gz | samtools sort --threads 20 -o SCCA1009_paired.bam --output-fmt BAM
 ```
-Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sciurus_carolinensis_GCA_902686445.2/Info/Index
+Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sciurus_carolinensis_GCA_902686445.2/Info/Index, or via the command-line:
 ```bash
-
+wget http://ftp.ensembl.org/pub/rapid-release/species/Sciurus_carolinensis/GCA_902686445.2/genome/Sciurus_carolinensis-GCA_902686445.2-unmasked.fa.gz
 ```
 Note: Will not align against the smaller unplaced scaffolds as some had crazy high coverages when I ran through this pipeline the first time (possibly reducing coverage on the chromosomes), so I used seqkit to remove scaffolds less than 1Mb in the genome file.
 ```bash
 seqkit seq --min-len 1000000 genome.fa.gz > genome_1MBmin.fa.gz
 ```
-Note: Aligning unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file, then aligned.
+Note: Aligning unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file, then aligned. e.g., concatenation and single-end alignment:
 ```bash
-cat 1U.fastq.gz 2U.fastq.gz > UC.fastq.gz
+cat SCCA1009_trimmed_1U.fastq.gz SCCA1009_trimmed_2U.fastq.gz > SCCA1009_trimmed_UC.fastq.gz
+bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_UC.fastq.gz | samtools sort --threads 20 -o SCCA1009_unpaired.bam --output-fmt BAM
 ```
-
 4) Check initial quality of the alignments using QualiMap and MultiQC.
 ```bash
 
