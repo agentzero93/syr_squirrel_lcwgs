@@ -44,7 +44,7 @@ Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sc
 
 Note: Will not align against the smaller unplaced scaffolds as some had crazy high coverages when I ran through this pipeline the first time (possibly reducing coverage on the chromosomes), so I used seqkit (https://github.com/shenwei356/seqkit) to remove scaffolds less than 1Mb in the genome file.
 
-Note: Aliging unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file (cat 1U.fastq.gz 2U.fastq.gz > UC.fastq.gz), then aligned.
+Note: Aligning unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file (cat 1U.fastq.gz 2U.fastq.gz > UC.fastq.gz), then aligned.
 
 4) Check initial quality of the alignments using QualiMap and MultiQC.
 5) Mark and remove duplicate aligned reads using Picard MarkDuplicates (then verify that duplicates have been removed using QualiMap and MultiQC).
