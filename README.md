@@ -8,9 +8,10 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 3) Trimmomatic (https://github.com/usadellab/Trimmomatic)
 ### Alignment ###
 1) BWA (https://github.com/lh3/bwa)
-2) samtools (http://www.htslib.org/)
-3) QualiMap (http://qualimap.conesalab.org/)
-4) MultiQC
+2) seqkit 2.3.0 (https://github.com/shenwei356/seqkit)
+3) samtools (http://www.htslib.org/)
+4) QualiMap (http://qualimap.conesalab.org/)
+5) MultiQC
 ### SNP generation ###
 1) GATK (https://gatk.broadinstitute.org/hc/en-us)
 2) Picard (https://github.com/broadinstitute/picard)
@@ -22,9 +23,14 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 3)
 
 # Data generation (only running Syracuse samples as of now) #
+
+Note: 37 samples were originally run at 3x, but chromosome coverage was only at 2x. So, we resequenced these samples at 7x to get to 5x chromosome coverage.
+
+Note: JPV022 doesn't appear to be from Syracuse, will not run in pipeline (46 samples remaining).
+
 1) Check the quality of the raw reads (.fastq.gz) using FastQC and MultiQC.
 
-Note: SCCA1009 SCCA1011 SCCA1012 SCCA1017 SCCA1018 SCCA1020 SCCA1026 SCCA1033 SCCA1034 SCCA1040 were run at 10x, the rest were run at 3x.
+Note: SCCA1009 SCCA1011 SCCA1012 SCCA1017 SCCA1018 SCCA1020 SCCA1026 SCCA1033 SCCA1034 SCCA1040 were run at 10x, the rest were run at 7x.
 
 Note: Raw reads look good, just a bit of adapter contamination.
 
@@ -36,9 +42,9 @@ Note: Reads no longer have adapter contamination.
 
 Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sciurus_carolinensis_GCA_902686445.2/Info/Index
 
-Note: Aliging unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file (cat 1U.fastq.gz 2U.fastq.gz > UC.fastq.gz), then aligned.
+Note: Will not align against the smaller unplaced scaffolds as some had crazy high coverages when I ran through this pipeline the first time (possibly reducing coverage on the chromosomes), so I used seqkit (https://github.com/shenwei356/seqkit) to remove scaffolds less than 1Mb in the genome file.
 
-Note: To parallelize, run across multiple nodes with as many threads as possible on your computer(s). Do not try to run multiple alignments on a single node, this will result in a major slow down (see https://www.biostars.org/p/420062/).
+Note: Aliging unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file (cat 1U.fastq.gz 2U.fastq.gz > UC.fastq.gz), then aligned.
 
 4) Check initial quality of the alignments using QualiMap and MultiQC.
 5) Mark and remove duplicate aligned reads using Picard MarkDuplicates (then verify that duplicates have been removed using QualiMap and MultiQC).
@@ -47,11 +53,9 @@ Note: I merged the unpaired and paired read alignments (*_merged.bam) prior to d
 
 Note: Use Picard AddOrReplaceReadGroups to fix the read groups if read groups get messed up after merging.
 
-Note: Coverage is not what I was expecting on the assembled chromosomes for the majority of the samples. For the 10x sequencing runs, assembled chromosomes were only covered at around 6-7x, and for the 3x sequencing runs assembled chromosomes were only covered at around 2x. For some reason, the unplaced scaffolds have much higher coverage than the chromosomes (some have crazy high coverage - 1000x+ - most likely due to repetitive sequence?). I tried realignment without these scaffolds included but that only marginally increased coverage on the chromosomes, so it seems this could just be an issue with the genome/species (but I really don't know). I guess we will need to sequence at greater depth than we actually need to get our desired chromosome coverage (eg, sequence at 7-8x effort to get 5x coverage). In any case, I think it's a good idea to not align against the smaller unplaced scaffold as they could have an increased percentage of repetitive sequences (and thereby reduce coverage on the chromosomes), so I used seqkit (https://github.com/shenwei356/seqkit) to remove scaffolds less than 1Mb in the genome file.
+6) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 46 here).
 
-6) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 47 here).
-
-Note: Only running this pipeline on the 47 Syracuse samples for now. Once the other cities are sequenced, I will run those samples through the pipeline as well.
+Note: Only running this pipeline on the 46 Syracuse samples for now. Once the other cities are sequenced, I will run those samples through the pipeline as well.
 
 7) Second step of the GATK SNP calling pipeline. Run GenomicsDBImport to combine the variants called across each sample (1 database produced for each chromosome and unplaced contig; 752 here).
 8) Third and final step of the GATK SNP calling pipeline. Run GenotypeGVCFs to jointly call variants for every sample across all chromosomes and unplaced contigs (1 gvcf produced for each chromosome and unplaced contig; 752 here). After the gvcfs are generated, use Picard to combine all 752 files into one large gvcf file.
