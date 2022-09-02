@@ -38,7 +38,7 @@ Note: Raw reads look good, just a bit of adapter contamination.
 
 2) Trim the raw reads of adapter contamination and low-quality bases using Trimmomatic (then reassess quality with FastQC and MultiQC).
 ```bash
-
+java -jar /sw/eb/sw/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE -threads 4 SCCA1009_raw_R1.fastq.gz SCCA1009_raw_R2.fastq.gz SCCA1009_trimmed_1P.fastq.gz SCCA1009_trimmed_1U.fastq.gz SCCA1009_trimmed_2P.fastq.gz SCCA1009_trimmed_2U.fastq.gz ILLUMINACLIP:TruSeq3-PE-2.fa:2:30:10 SLIDINGWINDOW:4:25
 ```
 Note: Reads no longer have adapter contamination.
 3) Align the trimmed reads to the reference genome using BWA. e.g., paired-end alignment:
@@ -62,7 +62,7 @@ bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_UC.fastq.gz | samtools sort --threads
 ```bash
 
 ```
-5) Mark and remove duplicate aligned reads using Picard MarkDuplicates (then verify that duplicates have been removed using QualiMap and MultiQC).
+5) Mark duplicate aligned reads using Picard MarkDuplicates (then reassess bam files with QualiMap and MultiQC).
 ```bash
 
 ```
