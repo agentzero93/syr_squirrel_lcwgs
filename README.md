@@ -30,7 +30,9 @@ Note: JPV022 doesn't appear to be from Syracuse, will not run in pipeline (46 sa
 
 1) Check the quality of the raw reads (.fastq.gz) using FastQC and MultiQC.
 ```bash
-
+fastqc SCCA1009_R1.fastq.gz --outdir ./ --threads 20
+fastqc SCCA1009_R2.fastq.gz --outdir ./ --threads 20
+multiqc ./ --interactive
 ```
 Note: SCCA1009 SCCA1011 SCCA1012 SCCA1017 SCCA1018 SCCA1020 SCCA1026 SCCA1033 SCCA1034 SCCA1040 were run at 10x, the rest were run at 7x.
 
@@ -58,17 +60,15 @@ Note: Aligning unpaired reads to the reference genome as well since there is a d
 cat SCCA1009_trimmed_1U.fastq.gz SCCA1009_trimmed_2U.fastq.gz > SCCA1009_trimmed_UC.fastq.gz
 bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_UC.fastq.gz | samtools sort --threads 20 -o SCCA1009_unpaired.bam --output-fmt BAM
 ```
-4) Check initial quality of the alignments using QualiMap and MultiQC.
+4) Merge the unpaired and paired read alignments using samtools merge and check their quality using QualiMap and MultiQC.
 ```bash
-
+samtools merge --threads 20 -o SCCA1009_merged.bam SCCA1009_paired.bam SCCA1009_unpaired.bam
+qualimap bamqc -bam SCCA1009_merged.bam -outdir SCCA1009_merged_qualimap -nt 20 --java-mem-size=110G
+multiqc ./ --interactive
 ```
 5) Mark duplicate aligned reads using Picard MarkDuplicates (then reassess bam files with QualiMap and MultiQC).
 ```bash
 java -jar picard.jar MarkDuplicates I=SCCA1009_merged.bam O=SCCA1009_merged_dedup.bam M=SCCA1009_merged_metrics.txt
-```
-Note: I merged the unpaired and paired read alignments prior to deduplicating the reads using samtools merge.
-```bash
-samtools merge --threads 20 -o SCCA1009_merged.bam SCCA1009_paired.bam SCCA1009_unpaired.bam
 ```
 6) Add read group header to the deduplicated bam files using Picard AddOrReplaceReadGroups, then index bam files with samtools index (required by GATK).
 ```bash
