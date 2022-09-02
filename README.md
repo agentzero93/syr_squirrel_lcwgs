@@ -13,9 +13,9 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 4) QualiMap (http://qualimap.conesalab.org/)
 5) MultiQC
 ### SNP generation ###
-1) GATK (https://gatk.broadinstitute.org/hc/en-us)
+1) GATK 4.2.6.1 (https://gatk.broadinstitute.org/hc/en-us)
 2) Picard 2.25.6 (https://github.com/broadinstitute/picard)
-3) bcftools (https://samtools.github.io/bcftools/bcftools.html)
+3) bcftools 1.16 (https://samtools.github.io/bcftools/bcftools.html)
 4) samtools
 ### Analysis ###
 1)
@@ -64,11 +64,11 @@ bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_UC.fastq.gz | samtools sort --threads
 ```
 5) Mark duplicate aligned reads using Picard MarkDuplicates (then reassess bam files with QualiMap and MultiQC).
 ```bash
-
+java -jar picard.jar MarkDuplicates I=SCCA1009_merged.bam O=SCCA1009_merged_dedup.bam M=SCCA1009_merged_metrics.txt
 ```
 Note: I merged the unpaired and paired read alignments prior to deduplicating the reads using samtools merge.
 ```bash
-
+samtools merge --threads 20 -o SCCA1009_merged.bam SCCA1009_paired.bam SCCA1009_unpaired.bam
 ```
 6) Add read group header to the deduplicated bam files using Picard AddOrReplaceReadGroups.
 ```bash
