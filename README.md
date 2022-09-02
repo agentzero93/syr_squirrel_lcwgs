@@ -73,7 +73,7 @@ samtools merge --threads 20 -o SCCA1009_merged.bam SCCA1009_paired.bam SCCA1009_
 6) Add read group header to the deduplicated bam files using Picard AddOrReplaceReadGroups, then index bam files with samtools index (required by GATK).
 ```bash
 java -jar picard.jar AddOrReplaceReadGroups I=SCCA1009_merged_dedup.bam O=SCCA1009_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGPU=HMJ7JDSX2.2.SCCA1009 RGSM=SCCA1009 RGPL=ILLUMINA RGLB=wgs_SCCA1009
-samtools index SCCA1009_merged_dedup_rg.bam
+samtools index --threads 20 SCCA1009_merged_dedup_rg.bam
 ```
 7) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 46 here).
 ```bash
