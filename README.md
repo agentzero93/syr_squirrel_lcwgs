@@ -30,8 +30,9 @@ Note: JPV022 doesn't appear to be from Syracuse, will not run in pipeline (46 sa
 
 1) Check the quality of the raw reads (.fastq.gz) using FastQC and MultiQC.
 ```bash
-fastqc SCCA1009_R1.fastq.gz --outdir ./ --threads 20
-fastqc SCCA1009_R2.fastq.gz --outdir ./ --threads 20
+fastqc SCCA1009_raw_R1.fastq.gz --outdir ./ --threads 20
+fastqc SCCA1009_raw_R2.fastq.gz --outdir ./ --threads 20
+...
 multiqc ./ --interactive
 ```
 Note: SCCA1009 SCCA1011 SCCA1012 SCCA1017 SCCA1018 SCCA1020 SCCA1026 SCCA1033 SCCA1034 SCCA1040 were run at 10x, the rest were run at 7x.
@@ -64,6 +65,7 @@ seqkit seq --min-len 1000000 genome.fa.gz > genome_1MBmin.fa.gz
 Note: Aligning unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file, then aligned. e.g., concatenation and single-end alignment:
 ```bash
 cat SCCA1009_trimmed_1U.fastq.gz SCCA1009_trimmed_2U.fastq.gz > SCCA1009_trimmed_UC.fastq.gz
+
 bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_UC.fastq.gz | \
   samtools sort --threads 20 -o SCCA1009_unpaired.bam --output-fmt BAM
 ```
@@ -73,15 +75,20 @@ samtools merge --threads 20 \
   -o SCCA1009_merged.bam \
   SCCA1009_paired.bam \
   SCCA1009_unpaired.bam
+  
 qualimap bamqc -bam SCCA1009_merged.bam \
   -outdir SCCA1009_merged_qualimap \
   -nt 20 \
   --java-mem-size=110G
+  
 multiqc ./ --interactive
 ```
 5) Mark duplicate aligned reads using Picard MarkDuplicates (then reassess bam files with QualiMap and MultiQC).
 ```bash
-java -jar picard.jar MarkDuplicates I=SCCA1009_merged.bam O=SCCA1009_merged_dedup.bam M=SCCA1009_merged_metrics.txt
+java -jar picard.jar MarkDuplicates \
+  I=SCCA1009_merged.bam \
+  O=SCCA1009_merged_dedup.bam \
+  M=SCCA1009_merged_metrics.txt
 ```
 6) Add read group header to the deduplicated bam files using Picard AddOrReplaceReadGroups, then index bam files with samtools index (required by GATK).
 ```bash
@@ -90,8 +97,10 @@ java -jar picard.jar AddOrReplaceReadGroups \
   O=SCCA1009_merged_dedup_rg.bam \
   RGID=HMJ7JDSX2.2 \
   RGPU=HMJ7JDSX2.2.SCCA1009 \
-  RGSM=SCCA1009 RGPL=ILLUMINA \
+  RGSM=SCCA1009 \
+  RGPL=ILLUMINA \
   RGLB=wgs_SCCA1009
+  
 samtools index -@ 20 SCCA1009_merged_dedup_rg.bam
 ```
 7) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 46 here).
