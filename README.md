@@ -3,7 +3,7 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 
 # Tools used (running list) #
 ### Read data QC ###
-1) FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+1) FastQC 0.11.9 (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 2) MultiQC (https://multiqc.info/)
 3) Trimmomatic 0.39 (https://github.com/usadellab/Trimmomatic)
 ### Alignment ###
@@ -70,13 +70,14 @@ Note: I merged the unpaired and paired read alignments prior to deduplicating th
 ```bash
 samtools merge --threads 20 -o SCCA1009_merged.bam SCCA1009_paired.bam SCCA1009_unpaired.bam
 ```
-6) Add read group header to the deduplicated bam files using Picard AddOrReplaceReadGroups.
+6) Add read group header to the deduplicated bam files using Picard AddOrReplaceReadGroups, then index bam files with samtools index (required by GATK).
 ```bash
-java -jar picard.jar AddOrReplaceReadGroups I=SCCA1009_merged_dedup.bam O=SCCA1009_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGPU=HMJ7JDSX2.2.SCCA1009 RGSM=SCCA1009 RGPL=ILLUMINA RGLB=wgs_SCCA1009 
+java -jar picard.jar AddOrReplaceReadGroups I=SCCA1009_merged_dedup.bam O=SCCA1009_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGPU=HMJ7JDSX2.2.SCCA1009 RGSM=SCCA1009 RGPL=ILLUMINA RGLB=wgs_SCCA1009
+samtools index SCCA1009_merged_dedup_rg.bam
 ```
 7) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 46 here).
 ```bash
-
+gatk --java-options '-Xmx100g' HaplotypeCaller --input SCCA1009_merged_dedup_rg.bam --output SCCA1009_merged_dedup_rg.gvcf.gz --reference Sciurus_carolinensis-GCA_902686445.2-unmasked_1MBmin.fa.gz -ERC GVCF
 ```
 Note: Only running this pipeline on the 46 Syracuse samples for now. Once the other cities are sequenced, I will run those samples through the pipeline as well.
 
