@@ -5,7 +5,7 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 ### Read data QC ###
 1) FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 2) MultiQC (https://multiqc.info/)
-3) Trimmomatic (https://github.com/usadellab/Trimmomatic)
+3) Trimmomatic 0.39 (https://github.com/usadellab/Trimmomatic)
 ### Alignment ###
 1) BWA 0.7.17 (https://github.com/lh3/bwa)
 2) seqkit 2.3.0 (https://github.com/shenwei356/seqkit)
