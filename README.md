@@ -40,12 +40,18 @@ Note: Raw reads look good, just a bit of adapter contamination.
 
 2) Trim the raw reads of adapter contamination and low-quality bases using Trimmomatic (then reassess quality with FastQC and MultiQC).
 ```bash
-java -jar trimmomatic-0.39.jar PE -threads 4 SCCA1009_raw_R1.fastq.gz SCCA1009_raw_R2.fastq.gz SCCA1009_trimmed_1P.fastq.gz SCCA1009_trimmed_1U.fastq.gz SCCA1009_trimmed_2P.fastq.gz SCCA1009_trimmed_2U.fastq.gz ILLUMINACLIP:TruSeq3-PE-2.fa:2:30:10 SLIDINGWINDOW:4:25
+java -jar trimmomatic-0.39.jar PE \
+  -threads 20 \
+  SCCA1009_raw_R1.fastq.gz SCCA1009_raw_R2.fastq.gz \
+  SCCA1009_trimmed_1P.fastq.gz SCCA1009_trimmed_1U.fastq.gz SCCA1009_trimmed_2P.fastq.gz SCCA1009_trimmed_2U.fastq.gz \
+  ILLUMINACLIP:TruSeq3-PE-2.fa:2:30:10 \
+  SLIDINGWINDOW:4:25
 ```
 Note: Reads no longer have adapter contamination.
 3) Align the trimmed reads to the reference genome using BWA. e.g., paired-end alignment:
 ```bash
-bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_1P.fastq.gz SCCA1009_trimmed_2P.fastq.gz | samtools sort --threads 20 -o SCCA1009_paired.bam --output-fmt BAM
+bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_1P.fastq.gz SCCA1009_trimmed_2P.fastq.gz | \
+  samtools sort --threads 20 -o SCCA1009_paired.bam --output-fmt BAM
 ```
 Note: The reference genome can be downloaded here - https://rapid.ensembl.org/Sciurus_carolinensis_GCA_902686445.2/Info/Index, or via the command-line:
 ```bash
@@ -58,12 +64,19 @@ seqkit seq --min-len 1000000 genome.fa.gz > genome_1MBmin.fa.gz
 Note: Aligning unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file, then aligned. e.g., concatenation and single-end alignment:
 ```bash
 cat SCCA1009_trimmed_1U.fastq.gz SCCA1009_trimmed_2U.fastq.gz > SCCA1009_trimmed_UC.fastq.gz
-bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_UC.fastq.gz | samtools sort --threads 20 -o SCCA1009_unpaired.bam --output-fmt BAM
+bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_UC.fastq.gz | \
+  samtools sort --threads 20 -o SCCA1009_unpaired.bam --output-fmt BAM
 ```
 4) Merge the unpaired and paired read alignments using samtools merge and check their quality using QualiMap and MultiQC.
 ```bash
-samtools merge --threads 20 -o SCCA1009_merged.bam SCCA1009_paired.bam SCCA1009_unpaired.bam
-qualimap bamqc -bam SCCA1009_merged.bam -outdir SCCA1009_merged_qualimap -nt 20 --java-mem-size=110G
+samtools merge --threads 20 \
+  -o SCCA1009_merged.bam \
+  SCCA1009_paired.bam \
+  SCCA1009_unpaired.bam
+qualimap bamqc -bam SCCA1009_merged.bam \
+  -outdir SCCA1009_merged_qualimap \
+  -nt 20 \
+  --java-mem-size=110G
 multiqc ./ --interactive
 ```
 5) Mark duplicate aligned reads using Picard MarkDuplicates (then reassess bam files with QualiMap and MultiQC).
@@ -72,12 +85,22 @@ java -jar picard.jar MarkDuplicates I=SCCA1009_merged.bam O=SCCA1009_merged_dedu
 ```
 6) Add read group header to the deduplicated bam files using Picard AddOrReplaceReadGroups, then index bam files with samtools index (required by GATK).
 ```bash
-java -jar picard.jar AddOrReplaceReadGroups I=SCCA1009_merged_dedup.bam O=SCCA1009_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGPU=HMJ7JDSX2.2.SCCA1009 RGSM=SCCA1009 RGPL=ILLUMINA RGLB=wgs_SCCA1009
+java -jar picard.jar AddOrReplaceReadGroups \
+  I=SCCA1009_merged_dedup.bam \
+  O=SCCA1009_merged_dedup_rg.bam \
+  RGID=HMJ7JDSX2.2 \
+  RGPU=HMJ7JDSX2.2.SCCA1009 \
+  RGSM=SCCA1009 RGPL=ILLUMINA \
+  RGLB=wgs_SCCA1009
 samtools index -@ 20 SCCA1009_merged_dedup_rg.bam
 ```
 7) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 46 here).
 ```bash
-gatk --java-options '-Xmx100g' HaplotypeCaller --input SCCA1009_merged_dedup_rg.bam --output SCCA1009_merged_dedup_rg.gvcf.gz --reference Sciurus_carolinensis-GCA_902686445.2-unmasked_1MBmin.fa.gz -ERC GVCF
+gatk --java-options '-Xmx100g' HaplotypeCaller \
+  --input SCCA1009_merged_dedup_rg.bam \
+  --output SCCA1009_merged_dedup_rg.gvcf.gz \
+  --reference Sciurus_carolinensis-GCA_902686445.2-unmasked_1MBmin.fa.gz \
+  -ERC GVCF
 ```
 Note: Only running this pipeline on the 46 Syracuse samples for now. Once the other cities are sequenced, I will run those samples through the pipeline as well.
 
