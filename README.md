@@ -9,12 +9,12 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 ### Alignment ###
 1) BWA 0.7.17 (https://github.com/lh3/bwa)
 2) seqkit 2.3.0 (https://github.com/shenwei356/seqkit)
-3) samtools (http://www.htslib.org/)
+3) samtools 1.13 (http://www.htslib.org/)
 4) QualiMap (http://qualimap.conesalab.org/)
 5) MultiQC
 ### SNP generation ###
 1) GATK (https://gatk.broadinstitute.org/hc/en-us)
-2) Picard (https://github.com/broadinstitute/picard)
+2) Picard 2.25.6 (https://github.com/broadinstitute/picard)
 3) bcftools (https://samtools.github.io/bcftools/bcftools.html)
 4) samtools
 ### Analysis ###
