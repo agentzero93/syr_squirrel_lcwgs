@@ -60,7 +60,7 @@ wget http://ftp.ensembl.org/pub/rapid-release/species/Sciurus_carolinensis/GCA_9
 ```
 Note: Will not align against the smaller unplaced scaffolds as some had crazy high coverages when I ran through this pipeline the first time (possibly reducing coverage on the chromosomes), so I used seqkit to remove scaffolds less than 1Mb in the genome file.
 ```bash
-seqkit seq --min-len 1000000 genome.fa.gz > genome_1MBmin.fa.gz
+seqkit seq --min-len 1000000 egsq_genome.fa.gz > egsq_genome_1MBmin.fa.gz
 ```
 Note: Aligning unpaired reads to the reference genome as well since there is a decent percentage (>10% of total cleaned reads) in the 3x samples. I first concatenated the forward (1U) and reverse (2U) unpaired reads to create one unpaired read file, then aligned. e.g., concatenation and single-end alignment:
 ```bash
@@ -108,7 +108,7 @@ samtools index -@ 20 SCCA1009_merged_dedup_rg.bam
 gatk --java-options '-Xmx100g' HaplotypeCaller \
   --input SCCA1009_merged_dedup_rg.bam \
   --output SCCA1009_merged_dedup_rg.gvcf.gz \
-  --reference genome_1MBmin.fa.gz \
+  --reference egsq_genome_1MBmin.fa.gz \
   -ERC GVCF
 ```
 Note: Only running this pipeline on the 46 Syracuse samples for now. Once the other cities are sequenced, I will run those samples through the pipeline as well.
