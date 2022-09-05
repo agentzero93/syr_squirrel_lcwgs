@@ -108,7 +108,7 @@ samtools index -@ 20 SCCA1009_merged_dedup_rg.bam
 gatk --java-options '-Xmx100g' HaplotypeCaller \
   --input SCCA1009_merged_dedup_rg.bam \
   --output SCCA1009_merged_dedup_rg.gvcf.gz \
-  --reference Sciurus_carolinensis-GCA_902686445.2-unmasked_1MBmin.fa.gz \
+  --reference genome_1MBmin.fa.gz \
   -ERC GVCF
 ```
 Note: Only running this pipeline on the 46 Syracuse samples for now. Once the other cities are sequenced, I will run those samples through the pipeline as well.
