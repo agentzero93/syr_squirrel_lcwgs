@@ -10,7 +10,7 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 1) BWA 0.7.17 (https://github.com/lh3/bwa)
 2) seqkit 2.3.0 (https://github.com/shenwei356/seqkit)
 3) samtools 1.13 (http://www.htslib.org/)
-4) QualiMap (http://qualimap.conesalab.org/)
+4) QualiMap 2.2.2-dev (http://qualimap.conesalab.org/)
 5) MultiQC
 ### SNP generation ###
 1) GATK 4.2.6.1 (https://gatk.broadinstitute.org/hc/en-us)
