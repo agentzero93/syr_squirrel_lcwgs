@@ -86,7 +86,7 @@ samtools flagstat --threads 20 SCCA1009_merged.bam > SCCA1009_merged_flagstat.tx
   
 multiqc ./ --interactive
 ```
-5) Mark duplicate aligned reads using Picard MarkDuplicates (then reassess bam files with QualiMap and MultiQC).
+5) Mark duplicate aligned reads using Picard MarkDuplicates (then reassess bam files with samtools, QualiMap, and MultiQC).
 ```bash
 java -jar picard.jar MarkDuplicates \
   I=SCCA1009_merged.bam \
