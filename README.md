@@ -69,7 +69,7 @@ cat SCCA1009_trimmed_1U.fastq.gz SCCA1009_trimmed_2U.fastq.gz > SCCA1009_trimmed
 bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_UC.fastq.gz | \
   samtools sort --threads 20 -o SCCA1009_unpaired.bam --output-fmt BAM
 ```
-4) Merge the unpaired and paired read alignments using samtools merge and check their quality using QualiMap and MultiQC.
+4) Merge the unpaired and paired read alignments using samtools merge and check their quality using samtools, QualiMap, and MultiQC.
 ```bash
 samtools merge --threads 20 \
   -o SCCA1009_merged.bam \
@@ -80,6 +80,9 @@ qualimap bamqc -bam SCCA1009_merged.bam \
   -outdir SCCA1009_merged_qualimap \
   -nt 20 \
   --java-mem-size=110G
+  
+samtools idxstats --threads 20 SCCA1009_merged.bam > SCCA1009_merged_idxstats.txt
+samtools flagstat --threads 20 SCCA1009_merged.bam > SCCA1009_merged_flagstat.txt
   
 multiqc ./ --interactive
 ```
