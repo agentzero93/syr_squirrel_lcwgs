@@ -2,27 +2,27 @@
 Repository to house scripts used to analyze low-coverage whole genome sequencing of the eastern gray squirrel (Sciurus carolinensis) in Syracuse, New York.
 
 # Tools used (running list) #
-### Read data QC ###
-1) FastQC 0.11.9 (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
-2) MultiQC 1.12 (https://multiqc.info/)
-3) Trimmomatic 0.39 (https://github.com/usadellab/Trimmomatic)
-### Alignment ###
-1) BWA 0.7.17 (https://github.com/lh3/bwa)
-2) seqkit 2.3.0 (https://github.com/shenwei356/seqkit)
-3) samtools 1.13 (http://www.htslib.org/)
-4) QualiMap 2.2.2-dev (http://qualimap.conesalab.org/)
-5) MultiQC
-### SNP generation ###
-1) GATK 4.2.6.1 (https://gatk.broadinstitute.org/hc/en-us)
-2) Picard 2.25.6 (https://github.com/broadinstitute/picard)
-3) bcftools 1.16 (https://samtools.github.io/bcftools/bcftools.html)
-4) samtools
-### Analysis ###
+### [Read data QC](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#read-data-qc-only-running-syracuse-samples-as-of-now) ###
+1) [FastQC v.0.11.9](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+2) [MultiQC v.1.12](https://multiqc.info/)
+3) [Trimmomatic v.0.39](https://github.com/usadellab/Trimmomatic)
+### [Alignment](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#alignment-1) ###
+1) [BWA v.0.7.17](https://github.com/lh3/bwa)
+2) [GATK v.3.8.1](https://gatk.broadinstitute.org/hc/en-us)
+3) [Picard v.2.25.6](https://github.com/broadinstitute/picard)
+4) [seqkit v.2.3.0](https://github.com/shenwei356/seqkit)
+5) [samtools v.1.13](http://www.htslib.org/)
+6) [QualiMap v.2.2.2-dev](http://qualimap.conesalab.org/)
+7) [MultiQC v.1.12](https://multiqc.info/)
+### [SNP generation](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#snp-generation-1) ###
+1) [bcftools v.1.16](https://samtools.github.io/bcftools/bcftools.html)
+2) [samtools v.1.13](http://www.htslib.org/)
+### [Analyses](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#analyses) ###
 1)
 2)
 3)
 
-# Data generation (only running Syracuse samples as of now) #
+# Read data QC (only running Syracuse samples as of now) #
 
 Note: 37 samples were originally run at 3x, but chromosome coverage was only at 2x. So, we resequenced these samples at 7x to get to 5x chromosome coverage.
 
@@ -47,9 +47,19 @@ java -jar trimmomatic-0.39.jar PE \
   SCCA1009_trimmed_1P.fastq.gz SCCA1009_trimmed_1U.fastq.gz SCCA1009_trimmed_2P.fastq.gz SCCA1009_trimmed_2U.fastq.gz \
   ILLUMINACLIP:TruSeq3-PE-2.fa:2:30:10 \
   SLIDINGWINDOW:4:25
+  
+fastqc SCCA1009_trimmed_1P.fastq.gz --outdir ./ --threads 20
+fastqc SCCA1009_trimmed_1U.fastq.gz --outdir ./ --threads 20
+fastqc SCCA1009_trimmed_2P.fastq.gz --outdir ./ --threads 20
+fastqc SCCA1009_trimmed_2P.fastq.gz --outdir ./ --threads 20
+...
+multiqc ./ --interactive
 ```
 Note: Reads no longer have adapter contamination.
-3) Align the trimmed reads to the reference genome using BWA. e.g., paired-end alignment:
+
+# Alignment #
+
+1) Align the trimmed reads to the reference genome using BWA. e.g., paired-end alignment:
 ```bash
 bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_1P.fastq.gz SCCA1009_trimmed_2P.fastq.gz | \
   samtools sort --threads 20 -o SCCA1009_paired.bam --output-fmt BAM
@@ -69,7 +79,7 @@ cat SCCA1009_trimmed_1U.fastq.gz SCCA1009_trimmed_2U.fastq.gz > SCCA1009_trimmed
 bwa mem -t 20 egsq_1MBmin SCCA1009_trimmed_UC.fastq.gz | \
   samtools sort --threads 20 -o SCCA1009_unpaired.bam --output-fmt BAM
 ```
-4) Merge the unpaired and paired read alignments using samtools merge and check their quality using samtools, QualiMap, and MultiQC.
+2) Merge the unpaired and paired read alignments using samtools merge and check their quality using samtools, QualiMap, and MultiQC.
 ```bash
 samtools merge --threads 20 \
   -o SCCA1009_merged.bam \
@@ -83,17 +93,16 @@ qualimap bamqc -bam SCCA1009_merged.bam \
   
 samtools idxstats --threads 20 SCCA1009_merged.bam > SCCA1009_merged_idxstats.txt
 samtools flagstat --threads 20 SCCA1009_merged.bam > SCCA1009_merged_flagstat.txt
-  
 multiqc ./ --interactive
 ```
-5) Mark duplicate aligned reads using Picard MarkDuplicates (then reassess bam files with samtools, QualiMap, and MultiQC).
+3) Mark duplicate aligned reads using Picard MarkDuplicates.
 ```bash
 java -jar picard.jar MarkDuplicates \
   I=SCCA1009_merged.bam \
   O=SCCA1009_merged_dedup.bam \
   M=SCCA1009_merged_metrics.txt
 ```
-6) Add read group header to the deduplicated bam files using Picard AddOrReplaceReadGroups, then index bam files with samtools index (required by GATK).
+4) Add read group header to the deduplicated bam files using Picard AddOrReplaceReadGroups.
 ```bash
 java -jar picard.jar AddOrReplaceReadGroups \
   I=SCCA1009_merged_dedup.bam \
@@ -103,31 +112,53 @@ java -jar picard.jar AddOrReplaceReadGroups \
   RGSM=SCCA1009 \
   RGPL=ILLUMINA \
   RGLB=wgs_SCCA1009
-  
+```
+5) Perform local realignment around indels using GATK and index bam files (then reassess final bam files with samtools, QualiMap, and MultiQC).
+```bash
+java -Xmx25g -jar $EBROOTGATK/GenomeAnalysisTK.jar \
+  -T RealignerTargetCreator \
+  -R egsq_genome_1MBmin.fa \
+  -I SCCA1009_merged_dedup_rg.bam \
+  -o SCCA1009_merged_dedup_rg.intervals 
+
+java -Xmx25g -jar $EBROOTGATK/GenomeAnalysisTK.jar \
+  -T IndelRealigner \
+  -R egsq_genome_1MBmin.fa \
+  -targetIntervals SCCA1009_merged_dedup_rg.intervals \
+  -I SCCA1009_merged_dedup_rg.bam \
+  -o SCCA1009_merged_dedup_rg_realigned.bam 
+
 samtools index -@ 20 SCCA1009_merged_dedup_rg.bam
-```
-7) First step of the GATK SNP calling pipeline. Run HaplotypeCaller on the deduplicated aligned reads to generate initial variant calls (1 gvcf produced for each sample; 46 here).
-```bash
-gatk --java-options '-Xmx100g' HaplotypeCaller \
-  --input SCCA1009_merged_dedup_rg.bam \
-  --output SCCA1009_merged_dedup_rg.gvcf.gz \
-  --reference egsq_genome_1MBmin.fa.gz \
-  -ERC GVCF
-```
-Note: Only running this pipeline on the 46 Syracuse samples for now. Once the other cities are sequenced, I will run those samples through the pipeline as well.
 
-8) Second step of the GATK SNP calling pipeline. Run GenomicsDBImport to combine the variants called across each sample (1 database produced for each chromosome and unplaced scaffold; 89 here).
-```bash
+qualimap bamqc -bam SCCA1009_merged_dedup_rg_realigned.bam \
+  -outdir SCCA1009_merged_dedup_rg_realigned_qualimap \
+  -nt 20 \
+  --java-mem-size=110G
 
+samtools idxstats --threads 20 SCCA1009_merged_dedup_rg_realigned.bam > SCCA1009_merged__dedup_rg_realignedidxstats.txt
+samtools flagstat --threads 20 SCCA1009_merged_dedup_rg_realigned.bam > SCCA1009_merged__dedup_rg_realignedflagstat.txt
+multiqc ./ --interactive
 ```
-9) Third and final step of the GATK SNP calling pipeline. Run GenotypeGVCFs to jointly call variants for every sample across all chromosomes and unplaced scaffolds (1 gvcf produced for each chromosome and unplaced scaffold; 89 here). After the gvcfs are generated, use Picard to combine all 89 files into one large gvcf file.
+
+# SNP generation #
+
+1) 
 ```bash
 
 ```
-10) Filter the variants called by GATK using bcftools.
-11) Annotate SNPs
+2) 
+```bash
 
-# Analyses (running) #
+```
+3)
+```bash
+
+```
+4)
+```bash
+
+```
+# Analyses #
 1)
 2)
 3)
