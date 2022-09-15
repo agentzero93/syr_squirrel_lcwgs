@@ -16,7 +16,7 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 7) [MultiQC v.1.12](https://multiqc.info/)
 ### [SNP generation](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#snp-generation-1) ###
 1) [bcftools v.1.16](https://samtools.github.io/bcftools/bcftools.html)
-2) [samtools v.1.13](http://www.htslib.org/)
+2) [snpCleaner v.2.4.3](https://github.com/tplinderoth/ngsQC/tree/master/snpCleaner)
 ### [Analyses](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#analyses) ###
 1)
 2)
@@ -142,9 +142,24 @@ multiqc ./ --interactive
 
 # SNP generation #
 
-1) 
+1) Create initial SNP calls.
 ```bash
-
+bcftools mpileup --threads 20 \
+  --min-BQ 20 \
+  --count-orphans \
+  --annotate AD,DP,SP \
+  --max-depth 100000 \
+  --redo-BAQ \
+  --skip-indels \
+  --output-type u \
+  --fasta-ref tap_hirise_genome.fasta \
+  *realigned.bam | \
+bcftools call --threads 20 \
+  --multiallelic-caller \
+  --annotate GQ,GP \
+  --output-type z \
+  --output squirrel_raw.vcf.gz \
+  - 
 ```
 2) 
 ```bash
