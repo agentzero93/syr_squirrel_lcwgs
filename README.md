@@ -142,7 +142,7 @@ multiqc ./ --interactive
 
 # SNP generation #
 
-1) Create initial SNP calls.
+1) Create initial SNP calls using bcftools.
 ```bash
 bcftools mpileup --threads 20 \
   --min-BQ 20 \
