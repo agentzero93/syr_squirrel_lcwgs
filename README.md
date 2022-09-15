@@ -115,7 +115,7 @@ java -jar picard.jar AddOrReplaceReadGroups \
   RGPL=ILLUMINA \
   RGLB=wgs_SCCA1009
 ```
-5) Perform local realignment around indels using GATK and index bam files (then reassess final bam files with samtools, QualiMap, and MultiQC).
+5) Perform local realignment around indels using GATK (then reassess final bam files with samtools, QualiMap, and MultiQC).
 ```bash
 java -Xmx25g -jar $EBROOTGATK/GenomeAnalysisTK.jar \
   -T RealignerTargetCreator \
@@ -129,8 +129,6 @@ java -Xmx25g -jar $EBROOTGATK/GenomeAnalysisTK.jar \
   -targetIntervals SCCA1009_merged_dedup_rg.intervals \
   -I SCCA1009_merged_dedup_rg.bam \
   -o SCCA1009_merged_dedup_rg_realigned.bam 
-
-samtools index -@ 20 SCCA1009_merged_dedup_rg.bam
 
 qualimap bamqc -bam SCCA1009_merged_dedup_rg_realigned.bam \
   -outdir SCCA1009_merged_dedup_rg_realigned_qualimap \
