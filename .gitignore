@@ -7,22 +7,21 @@
 *.fasta
 *.bam
 *.cram
+*.intervals
 ## ignore fasta, vcf, and bam index files ##
 *.gzi
 *.tbi
 *.bai
+*.fai
+*.dict
 ## ignore vcf files ##
 *.vcf.gz
 *.gvcf.gz
 ## ignore slurm output messages ##
 *.out
 ## ignore indexed genome files created by bwa ##
-02_align/egsq.amb
-02_align/egsq.ann
-02_align/egsq.pac
-02_align/egsq.sa
-02_align/egsq.bwt
-## ignore genomicsDB database directories (too many folders and files) ##
-04_snp_calling/gatk/genomics_db/*/
-## specific big files ##
-04_snp_calling/gatk/snp_filtering/gatk_hf_recs/hardfilters.txt
+02_align/egsq_1MBmin.amb
+02_align/egsq_1MBmin.ann
+02_align/egsq_1MBmin.pac
+02_align/egsq_1MBmin.sa
+02_align/egsq_1MBmin.bwt
