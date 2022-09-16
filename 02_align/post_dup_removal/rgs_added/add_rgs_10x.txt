@@ -1,0 +1,10 @@
+java -jar $EBROOTPICARD/picard.jar AddOrReplaceReadGroups I=../SCCA1009_merged_dedup.bam O=SCCA1009_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGSM=SCCA1009 RGPL=ILLUMINA RGLB=wgs_SCCA1009 
+java -jar $EBROOTPICARD/picard.jar AddOrReplaceReadGroups I=../SCCA1011_merged_dedup.bam O=SCCA1011_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGSM=SCCA1011 RGPL=ILLUMINA RGLB=wgs_SCCA1011 
+java -jar $EBROOTPICARD/picard.jar AddOrReplaceReadGroups I=../SCCA1012_merged_dedup.bam O=SCCA1012_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGSM=SCCA1012 RGPL=ILLUMINA RGLB=wgs_SCCA1012 
+java -jar $EBROOTPICARD/picard.jar AddOrReplaceReadGroups I=../SCCA1017_merged_dedup.bam O=SCCA1017_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGSM=SCCA1017 RGPL=ILLUMINA RGLB=wgs_SCCA1017 
+java -jar $EBROOTPICARD/picard.jar AddOrReplaceReadGroups I=../SCCA1018_merged_dedup.bam O=SCCA1018_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGSM=SCCA1018 RGPL=ILLUMINA RGLB=wgs_SCCA1018 
+java -jar $EBROOTPICARD/picard.jar AddOrReplaceReadGroups I=../SCCA1020_merged_dedup.bam O=SCCA1020_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGSM=SCCA1020 RGPL=ILLUMINA RGLB=wgs_SCCA1020 
+java -jar $EBROOTPICARD/picard.jar AddOrReplaceReadGroups I=../SCCA1026_merged_dedup.bam O=SCCA1026_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGSM=SCCA1026 RGPL=ILLUMINA RGLB=wgs_SCCA1026 
+java -jar $EBROOTPICARD/picard.jar AddOrReplaceReadGroups I=../SCCA1033_merged_dedup.bam O=SCCA1033_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGSM=SCCA1033 RGPL=ILLUMINA RGLB=wgs_SCCA1033 
+java -jar $EBROOTPICARD/picard.jar AddOrReplaceReadGroups I=../SCCA1034_merged_dedup.bam O=SCCA1034_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGSM=SCCA1034 RGPL=ILLUMINA RGLB=wgs_SCCA1034 
+java -jar $EBROOTPICARD/picard.jar AddOrReplaceReadGroups I=../SCCA1040_merged_dedup.bam O=SCCA1040_merged_dedup_rg.bam RGID=HMJ7JDSX2.2 RGSM=SCCA1040 RGPL=ILLUMINA RGLB=wgs_SCCA1040

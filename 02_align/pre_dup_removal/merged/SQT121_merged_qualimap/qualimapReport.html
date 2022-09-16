@@ -1,0 +1,1078 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/agogo.css" type="text/css" />
+		<link rel="stylesheet" href="css/report.css" type="text/css" />
+	<title>Qualimap report: BAM QC</title>
+
+	</head>
+<body>
+	<div class="header-wrapper">
+		<div class="header">
+		<p class="logo"><a href="http://qualimap.bioinfo.cipf.es/">
+		<img class="logo" src="css/qualimap_logo_small.png" alt="Logo"/>
+		</a></p>
+<div class="headertitle"><a href="">Qualimap Report: BAM QC</a></div>
+	</div>
+</div>
+
+<div class="content-wrapper">
+<div class="content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body">
+<div class=section>
+<h2>Input data and parameters<a class="headerlink" name="input" title="Permalink to this headline">&nbsp;</a></h2>
+<div class=summary>
+
+
+<div class=table-summary>
+<h3>QualiMap command line</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>qualimap bamqc -bam SQT121_merged.bam -c -nw 400 -hm 3</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Alignment</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Command line: </td>
+<td class=column2>bwa mem -t 20 egsq_1MBmin ../trim/SQT121_R2_7x_trimmed_1P.fastq.gz ../trim/SQT121_R2_7x_trimmed_2P.fastq.gz</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Draw chromosome limits: </td>
+<td class=column2>yes
+</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Analyze overlapping paired-end reads:</td>
+<td class=column2>no
+</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Program: </td>
+<td class=column2>bwa (0.7.17-r1188)</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Analysis date: </td>
+<td class=column2>Sat Sep 10 01:10:56 EDT 2022</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Size of a homopolymer: </td>
+<td class=column2>3</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Skip duplicate alignments: </td>
+<td class=column2>no
+</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number of windows: </td>
+<td class=column2>400</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>BAM file: </td>
+<td class=column2>SQT121_merged.bam</td>
+</tr>
+</table>
+</div>
+
+</div>
+</div> <!-- summary section -->
+
+<div class=section>
+<h2>Summary<a class="headerlink" name="summary" title="Permalink to this headline">&nbsp;</a></h2>
+<div class=summary>
+
+
+<div class=table-summary>
+<h3>Globals</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Reference size</td>
+<td class=column2>2,705,075,630</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number of reads</td>
+<td class=column2>181,990,375</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads</td>
+<td class=column2>166,637,950 / 91.56%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Unmapped reads</td>
+<td class=column2>15,352,425 / 8.44%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped paired reads</td>
+<td class=column2>153,164,472 / 84.16%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads, first in pair</td>
+<td class=column2>77,525,474 / 42.6%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads,  second in pair</td>
+<td class=column2>75,638,998 / 41.56%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads, both in pair</td>
+<td class=column2>147,200,044 / 80.88%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads, singletons</td>
+<td class=column2>5,964,428 / 3.28%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Secondary alignments</td>
+<td class=column2>0</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Supplementary alignments</td>
+<td class=column2>1,856,258 / 1.02%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Read min/max/mean length</td>
+<td class=column2>3 / 151 / 121.17</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Duplicated reads (estimated)</td>
+<td class=column2>29,661,329 / 16.3%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Duplication rate</td>
+<td class=column2>12.47%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Clipped reads</td>
+<td class=column2>14,927,320 / 8.2%</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>ACGT Content</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number/percentage of A's</td>
+<td class=column2>6,523,351,628 / 30.3%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number/percentage of C's</td>
+<td class=column2>4,325,832,351 / 20.09%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number/percentage of T's</td>
+<td class=column2>6,368,351,693 / 29.58%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number/percentage of G's</td>
+<td class=column2>4,310,864,811 / 20.02%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Number/percentage of N's</td>
+<td class=column2>312,123 / 0%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>GC Percentage</td>
+<td class=column2>40.12%</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Coverage</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mean</td>
+<td class=column2>7.9694</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Standard Deviation</td>
+<td class=column2>115.5175</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Mapping Quality</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mean Mapping Quality</td>
+<td class=column2>51.06</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Insert size</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mean</td>
+<td class=column2>83,885.37</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Standard Deviation</td>
+<td class=column2>2,516,000.37</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>P25/Median/P75</td>
+<td class=column2>193 / 238 / 298</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Mismatches and indels</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>General error rate</td>
+<td class=column2>1.4%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mismatches</td>
+<td class=column2>283,317,910</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Insertions</td>
+<td class=column2>9,763,837</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads with at least one insertion</td>
+<td class=column2>5.33%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Deletions</td>
+<td class=column2>11,674,022</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Mapped reads with at least one deletion</td>
+<td class=column2>6.39%</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td class=column1>Homopolymer indels</td>
+<td class=column2>42.04%</td>
+</tr>
+</table>
+</div>
+
+
+<div class=table-summary>
+<h3>Chromosome stats</h3>
+<table class="summary hovertable">
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td><b>Name</b></td>
+<td><b>Length</b></td>
+<td><b>Mapped bases</b></td>
+<td><b>Mean coverage</b></td>
+<td><b>Standard deviation</b></td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>1</td>
+<td>208993527</td>
+<td>1259953955</td>
+<td>6.0287</td>
+<td>4.2153</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>2</td>
+<td>199827622</td>
+<td>1263163576</td>
+<td>6.3213</td>
+<td>66.7773</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>3</td>
+<td>183546597</td>
+<td>1107007416</td>
+<td>6.0312</td>
+<td>4.428</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>4</td>
+<td>177112356</td>
+<td>1078465265</td>
+<td>6.0892</td>
+<td>5.4577</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>5</td>
+<td>175905472</td>
+<td>1277739332</td>
+<td>7.2638</td>
+<td>24.7985</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>6</td>
+<td>162265839</td>
+<td>973350773</td>
+<td>5.9985</td>
+<td>4.798</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>7</td>
+<td>154993933</td>
+<td>964133582</td>
+<td>6.2205</td>
+<td>7.3647</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>8</td>
+<td>148229995</td>
+<td>929814248</td>
+<td>6.2728</td>
+<td>5.3583</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>9</td>
+<td>141423999</td>
+<td>861215668</td>
+<td>6.0896</td>
+<td>4.9331</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>10</td>
+<td>140975125</td>
+<td>837609520</td>
+<td>5.9415</td>
+<td>4.2449</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>11</td>
+<td>135226351</td>
+<td>1029040809</td>
+<td>7.6098</td>
+<td>21.7073</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>X</td>
+<td>131720120</td>
+<td>441636746</td>
+<td>3.3528</td>
+<td>4.317</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>12</td>
+<td>118645147</td>
+<td>906029971</td>
+<td>7.6365</td>
+<td>8.7194</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>13</td>
+<td>94684172</td>
+<td>638257795</td>
+<td>6.7409</td>
+<td>10.7742</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>14</td>
+<td>88654151</td>
+<td>535586459</td>
+<td>6.0413</td>
+<td>22.0555</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>15</td>
+<td>83138899</td>
+<td>676290522</td>
+<td>8.1345</td>
+<td>40.179</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>16</td>
+<td>68567161</td>
+<td>591543030</td>
+<td>8.6272</td>
+<td>21.6875</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>17</td>
+<td>66045118</td>
+<td>593255515</td>
+<td>8.9826</td>
+<td>48.5512</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>18</td>
+<td>41557064</td>
+<td>270405417</td>
+<td>6.5068</td>
+<td>70.1465</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>19</td>
+<td>30991954</td>
+<td>321517119</td>
+<td>10.3742</td>
+<td>134.2795</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>Y</td>
+<td>4810933</td>
+<td>20833019</td>
+<td>4.3303</td>
+<td>9.8066</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000006.1</td>
+<td>8402289</td>
+<td>245447278</td>
+<td>29.212</td>
+<td>59.3579</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000004.1</td>
+<td>6410460</td>
+<td>105477362</td>
+<td>16.4539</td>
+<td>15.3094</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000005.1</td>
+<td>5308990</td>
+<td>274745606</td>
+<td>51.751</td>
+<td>279.165</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000007.1</td>
+<td>5063854</td>
+<td>98403403</td>
+<td>19.4325</td>
+<td>41.722</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000008.1</td>
+<td>4326611</td>
+<td>104924387</td>
+<td>24.2509</td>
+<td>29.3314</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000010.1</td>
+<td>3913960</td>
+<td>210096788</td>
+<td>53.6788</td>
+<td>141.3057</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000011.1</td>
+<td>3752592</td>
+<td>74225139</td>
+<td>19.7797</td>
+<td>35.9843</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000012.1</td>
+<td>3398208</td>
+<td>67826048</td>
+<td>19.9594</td>
+<td>26.0877</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000013.1</td>
+<td>3366225</td>
+<td>125232862</td>
+<td>37.2028</td>
+<td>54.1935</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000014.1</td>
+<td>3282125</td>
+<td>112130642</td>
+<td>34.164</td>
+<td>35.3257</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000036.1</td>
+<td>3118605</td>
+<td>49731199</td>
+<td>15.9466</td>
+<td>20.0698</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000015.1</td>
+<td>3064279</td>
+<td>168061509</td>
+<td>54.8454</td>
+<td>55.1295</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000016.1</td>
+<td>3047915</td>
+<td>102458964</td>
+<td>33.6161</td>
+<td>54.6628</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000017.1</td>
+<td>3015224</td>
+<td>134149581</td>
+<td>44.4908</td>
+<td>78.4935</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000018.1</td>
+<td>2629848</td>
+<td>88736324</td>
+<td>33.742</td>
+<td>34.305</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000019.1</td>
+<td>2573765</td>
+<td>122004198</td>
+<td>47.403</td>
+<td>59.9487</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000020.1</td>
+<td>2538454</td>
+<td>121400446</td>
+<td>47.8246</td>
+<td>62.945</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000021.1</td>
+<td>2446612</td>
+<td>166796926</td>
+<td>68.1747</td>
+<td>103.1312</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000022.1</td>
+<td>2434104</td>
+<td>39947653</td>
+<td>16.4116</td>
+<td>19.6335</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000024.1</td>
+<td>2223422</td>
+<td>53590544</td>
+<td>24.1027</td>
+<td>26.9206</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000025.1</td>
+<td>2209048</td>
+<td>48346483</td>
+<td>21.8857</td>
+<td>21.2801</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000009.1</td>
+<td>2174612</td>
+<td>327452033</td>
+<td>150.5795</td>
+<td>3,880.35</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000026.1</td>
+<td>2170072</td>
+<td>22195454</td>
+<td>10.228</td>
+<td>10.3565</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000027.1</td>
+<td>2139930</td>
+<td>80480773</td>
+<td>37.6091</td>
+<td>38.3835</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000028.1</td>
+<td>2102767</td>
+<td>35097686</td>
+<td>16.6912</td>
+<td>76.529</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000029.1</td>
+<td>2089753</td>
+<td>116912227</td>
+<td>55.9455</td>
+<td>73.6515</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000030.1</td>
+<td>1940562</td>
+<td>73322707</td>
+<td>37.7843</td>
+<td>60.0552</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000031.1</td>
+<td>1877203</td>
+<td>29327182</td>
+<td>15.6228</td>
+<td>24.2483</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000032.1</td>
+<td>1866882</td>
+<td>35104736</td>
+<td>18.8039</td>
+<td>23.4893</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000033.1</td>
+<td>1846946</td>
+<td>78021436</td>
+<td>42.2435</td>
+<td>192.3496</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000034.1</td>
+<td>1843046</td>
+<td>115916000</td>
+<td>62.8937</td>
+<td>130.455</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000035.1</td>
+<td>1827521</td>
+<td>66074682</td>
+<td>36.1554</td>
+<td>40.3852</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000037.1</td>
+<td>1802838</td>
+<td>120973089</td>
+<td>67.1015</td>
+<td>89.9636</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000038.1</td>
+<td>1785753</td>
+<td>28758333</td>
+<td>16.1043</td>
+<td>26.3167</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000039.1</td>
+<td>1783449</td>
+<td>30060572</td>
+<td>16.8553</td>
+<td>38.1596</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000041.1</td>
+<td>1733835</td>
+<td>85455479</td>
+<td>49.287</td>
+<td>51.9929</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000040.1</td>
+<td>1731233</td>
+<td>36836902</td>
+<td>21.2778</td>
+<td>26.1666</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000042.1</td>
+<td>1716154</td>
+<td>17588949</td>
+<td>10.2491</td>
+<td>11.7931</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000043.1</td>
+<td>1714846</td>
+<td>49799489</td>
+<td>29.0402</td>
+<td>27.7729</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000044.1</td>
+<td>1649170</td>
+<td>39743209</td>
+<td>24.0989</td>
+<td>32.2604</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000045.1</td>
+<td>1619137</td>
+<td>50576381</td>
+<td>31.2366</td>
+<td>34.6313</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000046.1</td>
+<td>1596526</td>
+<td>32269492</td>
+<td>20.2123</td>
+<td>37.633</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000047.1</td>
+<td>1581602</td>
+<td>28241123</td>
+<td>17.856</td>
+<td>20.936</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000048.1</td>
+<td>1567387</td>
+<td>54238985</td>
+<td>34.6047</td>
+<td>32.1109</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000049.1</td>
+<td>1518027</td>
+<td>12023252</td>
+<td>7.9203</td>
+<td>9.1238</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000050.1</td>
+<td>1505718</td>
+<td>32569213</td>
+<td>21.6304</td>
+<td>49.5977</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000001.1</td>
+<td>1427275</td>
+<td>19911073</td>
+<td>13.9504</td>
+<td>13.0347</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000002.1</td>
+<td>1380103</td>
+<td>22844825</td>
+<td>16.553</td>
+<td>21.9653</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000003.1</td>
+<td>1340613</td>
+<td>10416114</td>
+<td>7.7697</td>
+<td>7.6929</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000051.1</td>
+<td>1284951</td>
+<td>22559362</td>
+<td>17.5566</td>
+<td>35.767</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000052.1</td>
+<td>1272262</td>
+<td>61533596</td>
+<td>48.3655</td>
+<td>42.5157</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000053.1</td>
+<td>1270296</td>
+<td>20011449</td>
+<td>15.7534</td>
+<td>16.8262</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000054.1</td>
+<td>1257048</td>
+<td>50871159</td>
+<td>40.4687</td>
+<td>34.5868</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000055.1</td>
+<td>1222577</td>
+<td>29327595</td>
+<td>23.9883</td>
+<td>55.8919</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000056.1</td>
+<td>1195167</td>
+<td>163705614</td>
+<td>136.973</td>
+<td>178.1096</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000057.1</td>
+<td>1185416</td>
+<td>46585735</td>
+<td>39.2991</td>
+<td>69.8523</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000058.1</td>
+<td>1173495</td>
+<td>62847286</td>
+<td>53.5556</td>
+<td>80.9247</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000059.1</td>
+<td>1160222</td>
+<td>42574507</td>
+<td>36.6951</td>
+<td>54.5518</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000060.1</td>
+<td>1155998</td>
+<td>52392669</td>
+<td>45.3225</td>
+<td>132.5823</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000061.1</td>
+<td>1149056</td>
+<td>56735015</td>
+<td>49.3753</td>
+<td>62.1719</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000062.1</td>
+<td>1135576</td>
+<td>44977725</td>
+<td>39.6079</td>
+<td>43.1818</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000063.1</td>
+<td>1097598</td>
+<td>18820970</td>
+<td>17.1474</td>
+<td>13.3542</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000064.1</td>
+<td>1086809</td>
+<td>34285355</td>
+<td>31.5468</td>
+<td>40.9368</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000065.1</td>
+<td>1071909</td>
+<td>21427208</td>
+<td>19.9898</td>
+<td>20.4421</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000067.1</td>
+<td>1055643</td>
+<td>29366755</td>
+<td>27.8188</td>
+<td>42.6443</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000066.1</td>
+<td>1055014</td>
+<td>32975780</td>
+<td>31.2562</td>
+<td>31.682</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000068.1</td>
+<td>1038501</td>
+<td>10670518</td>
+<td>10.2749</td>
+<td>11.2248</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#EEEEEC';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+<td>CACRXI020000069.1</td>
+<td>1033007</td>
+<td>13282190</td>
+<td>12.8578</td>
+<td>16.4929</td>
+</tr>
+</table>
+</div>
+
+</div>
+</div> <!-- summary section -->
+
+
+
+<div class=section>
+
+<h2>Coverage across reference<a class="headerlink" name="genome_coverage_across_reference.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_coverage_across_reference.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Coverage Histogram<a class="headerlink" name="genome_coverage_histogram.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_coverage_histogram.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Coverage Histogram (0-50X)<a class="headerlink" name="genome_coverage_0to50_histogram.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_coverage_0to50_histogram.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Genome Fraction Coverage<a class="headerlink" name="genome_coverage_quotes.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_coverage_quotes.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Duplication Rate Histogram<a class="headerlink" name="genome_uniq_read_starts_histogram.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_uniq_read_starts_histogram.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Mapped Reads Nucleotide Content<a class="headerlink" name="genome_reads_content_per_read_position.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_reads_content_per_read_position.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Mapped Reads GC-content Distribution<a class="headerlink" name="genome_gc_content_per_window.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_gc_content_per_window.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Mapped Reads Clipping Profile<a class="headerlink" name="genome_reads_clipping_profile.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_reads_clipping_profile.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Homopolymer Indels<a class="headerlink" name="genome_homopolymer_indels" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_homopolymer_indels.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Mapping Quality Across Reference<a class="headerlink" name="genome_mapping_quality_across_reference.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_mapping_quality_across_reference.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Mapping Quality Histogram<a class="headerlink" name="genome_mapping_quality_histogram.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_mapping_quality_histogram.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Insert Size Across Reference<a class="headerlink" name="genome_insert_size_across_reference.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_insert_size_across_reference.png"></div>
+
+</div><!-- graph section -->
+
+
+<div class=section>
+
+<h2>Insert Size Histogram<a class="headerlink" name="genome_insert_size_histogram.png" title="Permalink to this headline">&nbsp;</a></h2>
+
+<div><img width=100% src="images_qualimapReport/genome_insert_size_histogram.png"></div>
+
+</div><!-- graph section -->
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="sidebar">
+<h3>Contents</h3>
+<li class="toctree-l1"><a class="reference internal" href="#input">Input data & parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_coverage_across_reference.png">Coverage across reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_coverage_histogram.png">Coverage Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_coverage_0to50_histogram.png">Coverage Histogram (0-50X)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_coverage_quotes.png">Genome Fraction Coverage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_uniq_read_starts_histogram.png">Duplication Rate Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_reads_content_per_read_position.png">Mapped Reads Nucleotide Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_gc_content_per_window.png">Mapped Reads GC-content Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_reads_clipping_profile.png">Mapped Reads Clipping Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_homopolymer_indels">Homopolymer Indels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_mapping_quality_across_reference.png">Mapping Quality Across Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_mapping_quality_histogram.png">Mapping Quality Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_insert_size_across_reference.png">Insert Size Across Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#genome_insert_size_histogram.png">Insert Size Histogram</a></li>
+</div> <!-- sidebar -->
+
+<div class="clearer"></div>
+</div>
+
+</div>
+
+
+<div class="footer-wrapper">
+<div class="footer">
+<div class="left">
+<div class="footer">
+2022/09/10 01:10:56
+</div>
+</div>
+<div class="right">
+<div class="footer">
+Generated by QualiMap v.2.2.2-dev
+</div
+</div>
+<div class="clearer"></div>
+</div> <!-- footer -->
+</div>
+</body>

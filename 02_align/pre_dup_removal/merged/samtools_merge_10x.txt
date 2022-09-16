@@ -1,0 +1,10 @@
+samtools merge --threads 20 -o SCCA1009_merged.bam ../SCCA1009_paired.bam ../SCCA1009_unpaired.bam
+samtools merge --threads 20 -o SCCA1011_merged.bam ../SCCA1011_paired.bam ../SCCA1011_unpaired.bam
+samtools merge --threads 20 -o SCCA1012_merged.bam ../SCCA1012_paired.bam ../SCCA1012_unpaired.bam
+samtools merge --threads 20 -o SCCA1017_merged.bam ../SCCA1017_paired.bam ../SCCA1017_unpaired.bam
+samtools merge --threads 20 -o SCCA1018_merged.bam ../SCCA1018_paired.bam ../SCCA1018_unpaired.bam
+samtools merge --threads 20 -o SCCA1020_merged.bam ../SCCA1020_paired.bam ../SCCA1020_unpaired.bam
+samtools merge --threads 20 -o SCCA1026_merged.bam ../SCCA1026_paired.bam ../SCCA1026_unpaired.bam
+samtools merge --threads 20 -o SCCA1033_merged.bam ../SCCA1033_paired.bam ../SCCA1033_unpaired.bam
+samtools merge --threads 20 -o SCCA1034_merged.bam ../SCCA1034_paired.bam ../SCCA1034_unpaired.bam
+samtools merge --threads 20 -o SCCA1040_merged.bam ../SCCA1040_paired.bam ../SCCA1040_unpaired.bam
