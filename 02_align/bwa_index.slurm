@@ -1,26 +1,18 @@
 #!/bin/bash
-##ENVIRONMENT SETTINGS; CHANGE WITH CAUTION
-#SBATCH --export=NONE                #Do not propagate environment
-#SBATCH --get-user-env=L             #Replicate login environment
 
-##NECESSARY JOB SPECIFICATIONS
-#SBATCH --job-name=index	     #Set the job name
-#SBATCH --time=2:00:00               #Set the wall clock limit to 2hr
-#SBATCH --nodes=1                    #Request 1 node
-#SBATCH --ntasks-per-node=1          #Request 1 tasks/cores per node
-#SBATCH --cpus-per-task=4	     #Request 4 core per command
-#SBATCH --mem=48G                    #Request 48GB per node
-#SBATCH --output=index.%j            #Send stdout/err to "index.[jobID]" 
+#SBATCH --output=bwa_index.out			  #Stdout/err file for each job
+#SBATCH --job-name=bwa_index			  #Set the job name
+#SBATCH --partition=general			  #Set the partition
+#SBATCH --time=3:00:00	                          #Max time job will run
+#SBATCH --cpus-per-task=1			  #Request 1 cores (cpus) per command
+#SBATCH --mem-per-cpu=30g			  #Request 30GB for each core (cpu)
+#SBATCH --mail-type=ALL 			  #Send email on all job events
+#SBATCH --mail-user=alexander.blumenfeld@yale.edu #Send all emails to this address
 
-##OPTIONAL JOB SPECIFICATIONS
-#SBATCH --mail-type=ALL              #Send email on all job events
-#SBATCH --mail-user=alex93@tamu.edu  #Send all emails to this address
-
-ml GCCcore/11.2.0
-ml BWA/0.7.17
+ml BWA/0.7.17-GCCcore-10.2.0
 
 ################################################################################
 
-bwa index -p egsq ./Sciurus_carolinensis-GCA_902686445.2-unmasked.fa.gz
+bwa index -p egsq_1MBmin ./Sciurus_carolinensis-GCA_902686445.2-unmasked_1MBmin.fa.gz
 
 ################################################################################

@@ -1,0 +1,10 @@
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=../pre_dup_removal/merged/SCCA1009_merged.bam O=SCCA1009_merged_dedup.bam M=SCCA1009_merged_metrics.txt
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=../pre_dup_removal/merged/SCCA1011_merged.bam O=SCCA1011_merged_dedup.bam M=SCCA1011_merged_metrics.txt
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=../pre_dup_removal/merged/SCCA1012_merged.bam O=SCCA1012_merged_dedup.bam M=SCCA1012_merged_metrics.txt
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=../pre_dup_removal/merged/SCCA1017_merged.bam O=SCCA1017_merged_dedup.bam M=SCCA1017_merged_metrics.txt
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=../pre_dup_removal/merged/SCCA1018_merged.bam O=SCCA1018_merged_dedup.bam M=SCCA1018_merged_metrics.txt
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=../pre_dup_removal/merged/SCCA1020_merged.bam O=SCCA1020_merged_dedup.bam M=SCCA1020_merged_metrics.txt
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=../pre_dup_removal/merged/SCCA1026_merged.bam O=SCCA1026_merged_dedup.bam M=SCCA1026_merged_metrics.txt
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=../pre_dup_removal/merged/SCCA1033_merged.bam O=SCCA1033_merged_dedup.bam M=SCCA1033_merged_metrics.txt
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=../pre_dup_removal/merged/SCCA1034_merged.bam O=SCCA1034_merged_dedup.bam M=SCCA1034_merged_metrics.txt
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=../pre_dup_removal/merged/SCCA1040_merged.bam O=SCCA1040_merged_dedup.bam M=SCCA1040_merged_metrics.txt

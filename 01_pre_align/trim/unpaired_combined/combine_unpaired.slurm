@@ -1,23 +1,16 @@
 #!/bin/bash
-##ENVIRONMENT SETTINGS; CHANGE WITH CAUTION
-#SBATCH --export=NONE                #Do not propagate environment
-#SBATCH --get-user-env=L             #Replicate login environment
-
-##NECESSARY JOB SPECIFICATIONS
-#SBATCH --job-name=combine_unpaired  #Set the job name
-#SBATCH --time=5:00:00               #Set the wall clock limit to 5hr
-#SBATCH --nodes=1                    #Request 1 node
-#SBATCH --ntasks-per-node=8          #Request 8 tasks/cores per node
-#SBATCH --cpus-per-task=1	     #Request 1 core per command
-#SBATCH --mem=20G                    #Request 20GB per node
-#SBATCH --output=combine_unpaired.%j #Send stdout/err to "combine_unpaired.[jobID]" 
-
-##OPTIONAL JOB SPECIFICATIONS
-#SBATCH --mail-type=ALL              #Send email on all job events
-#SBATCH --mail-user=alex93@tamu.edu  #Send all emails to this address
+#SBATCH --array=0-35                              #Number of jobs
+#SBATCH --output=combine_unpaired-%A_%2a-%N.out   #Stdout/err file for each job
+#SBATCH --job-name=combine_unpaired               #Set the job name
+#SBATCH --partition=general                       #Set the partition
+#SBATCH --time=1:00:00                            #Max time job will run
+#SBATCH --cpus-per-task=1                         #Request 1 cores (cpus) per command
+#SBATCH --mem-per-cpu=5gb                         #Request 5GB for each core (cpu)
+#SBATCH --mail-type=ALL                           #Send email on all job events
+#SBATCH --mail-user=alexander.blumenfeld@yale.edu #Send all emails to this address
 
 ################################################################################
 
-tamulauncher combine_unpaired.txt
+/ycga-gpfs/apps/hpc/software/dSQ/1.05/dSQBatch.py --job-file combine_unpaired.txt --status-dir ./
 
 ################################################################################
