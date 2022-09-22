@@ -14,11 +14,12 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 5) [samtools v.1.13](http://www.htslib.org/)
 6) [QualiMap v.2.2.2-dev](http://qualimap.conesalab.org/)
 7) [MultiQC v.1.12](https://multiqc.info/)
-### [SNP generation](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#snp-generation-1) ###
+### [snp generation](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#snp-generation-1) ###
 1) [bcftools v.1.16](https://samtools.github.io/bcftools/bcftools.html)
 2) [snpCleaner v.2.4.3](https://github.com/tplinderoth/ngsQC/tree/master/snpCleaner)
+3) [ANGSD v.0.938](http://www.popgen.dk/angsd/index.php/ANGSD)
 ### [Analyses](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#analyses) ###
-1)
+1) [PCAngsd v.1.11](https://github.com/Rosemeis/pcangsd)
 2)
 3)
 
@@ -140,9 +141,9 @@ samtools flagstat --threads 20 SCCA1009_merged_dedup_rg_realigned.bam > SCCA1009
 multiqc ./ --interactive
 ```
 
-# SNP generation #
+# snp generation #
 
-1) Create initial SNP calls using bcftools.
+1) Create initial snp calls using bcftools.
 ```bash
 bcftools mpileup --threads 20 \
   --min-BQ 20 \
@@ -161,15 +162,19 @@ bcftools call --threads 20 \
   --output squirrel_raw.vcf.gz \
   - 
 ```
-2) 
+2) First round of snp filtering using bcftools.
 ```bash
 
 ```
-3)
+3) Second round of snp filtering using snpCleaner.
 ```bash
 
 ```
-4)
+4) Final round of snp filtering using bcftools.
+```bash
+
+```
+5) Generate snp likelihoods using ANGSD.
 ```bash
 
 ```
