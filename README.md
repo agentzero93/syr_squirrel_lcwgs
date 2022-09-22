@@ -145,30 +145,54 @@ multiqc ./ --interactive
 
 1) Create initial snp calls using bcftools.
 ```bash
-bcftools mpileup --threads 20 \
-  --min-BQ 20 \
+# calling by chromosome, eg chr 1,
+bcftools mpileup --min-BQ 20 \
   --count-orphans \
   --annotate AD,DP,SP \
   --max-depth 100000 \
   --redo-BAQ \
   --skip-indels \
   --output-type u \
-  --fasta-ref tap_hirise_genome.fasta \
+  -r 1 \
+  --fasta-ref egsq_genome_1MBmin.fa \
   *realigned.bam | \
-bcftools call --threads 20 \
-  --multiallelic-caller \
+bcftools call --multiallelic-caller \
   --annotate GQ,GP \
   --output-type z \
-  --output squirrel_raw.vcf.gz \
-  - 
+  --output 1.vcf.gz
 ```
 2) First round of snp filtering using bcftools.
 ```bash
+# filtering by chromosome, eg chr 1,
+# extracting biallelic markers (remove --min-af 0.05:minor to keep rare alleles, eg for sfs)
+bcftools view --threads 4 \
+  --min-alleles 2 \
+  --max-alleles 2 \
+  --include 'QUAL>=40' \
+  --output-type u \
+  1.vcf.gz | \
+bcftools view --threads 4 \
+  --min-af 0.05:minor \
+  --output-type u \
+  --output 1_biallelic_f1_maf05.vcf
+
+# extracting invariant sites
+
 
 ```
 3) Second round of snp filtering using snpCleaner.
 ```bash
-
+# filtering by chromosome, eg chr 1,
+perl snpCleaner.pl \
+  -u 5 \ # minimum read depth for an individual to be considered 'covered'
+  -k 23 \ # minimum number of 'covered' individuals
+  -d 115 \ # minimum raw site read depth 
+  -D 828 \ # maximum raw site read depth 
+  -a 0 \ # minimum number of high-quality alternate alleles for site
+  -H 0.0001 \ # min p-value for exact test of excess of heterozygous
+  -h 0 \ # min p-value for exact test of HWE
+  -o 1_biallelic_f2_maf05.vcf \
+  1_biallelic_f1_maf05.vcf
 ```
 4) Final round of snp filtering using bcftools.
 ```bash
