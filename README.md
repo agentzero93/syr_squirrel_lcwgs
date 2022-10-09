@@ -14,14 +14,13 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 5) [samtools v.1.13](http://www.htslib.org/)
 6) [QualiMap v.2.2.2-dev](http://qualimap.conesalab.org/)
 7) [MultiQC v.1.12](https://multiqc.info/)
-### [snp generation](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#snp-generation-1) ###
-1) [bcftools v.1.16](https://samtools.github.io/bcftools/bcftools.html)
-2) [snpCleaner v.2.4.3](https://github.com/tplinderoth/ngsQC/tree/master/snpCleaner)
-3) [ANGSD v.0.938](http://www.popgen.dk/angsd/index.php/ANGSD)
+### [SNP generation](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#snp-generation-1) ###
+1) [ANGSD v.0.938](http://www.popgen.dk/angsd/index.php/ANGSD)
 ### [Analyses](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#analyses) ###
-1) [PCAngsd v.1.11](https://github.com/Rosemeis/pcangsd)
-2)
-3)
+1) [ngsLD v.1.1.1](https://github.com/fgvieira/ngsLD)
+2) [PCAngsd v.1.11](https://github.com/Rosemeis/pcangsd)
+3) [R v.4.2.1](https://www.r-project.org/)
+4)
 
 # Read data QC (only running Syracuse samples as of now) #
 
@@ -141,69 +140,41 @@ samtools flagstat --threads 20 SCCA1009_merged_dedup_rg_realigned.bam > SCCA1009
 multiqc ./ --interactive
 ```
 
-# snp generation #
-
-1) Create initial snp calls using bcftools.
+# SNP generation #
+1) Generate genotype likelihoods using ANGSD.
 ```bash
-# calling by chromosome, eg chr 1,
-bcftools mpileup --min-BQ 20 \
-  --count-orphans \
-  --annotate AD,DP,SP \
-  --max-depth 100000 \
-  --redo-BAQ \
-  --skip-indels \
-  --output-type u \
-  -r 1 \
-  --fasta-ref egsq_genome_1MBmin.fa \
-  *realigned.bam | \
-bcftools call --multiallelic-caller \
-  --annotate GQ,GP \
-  --output-type z \
-  --output 1.vcf.gz
+# snps for invasive samples #
+angsd -nThreads 10 -bam bam_list.txt -only_proper_pairs 0 -remove_bads 1 -ref egsq_genome_1MBmin.fa -anc egsq_genome_1MBmin.fa \
+	-rf chroms_subset.rf -GL 1 -doGlf 2 -dosaf 1 -doGeno 11 -doPost 1 -SNP_pval 1e-6 -doMajorMinor 1 \
+	-doMaf 1 -doCounts 1 -doPlink 2 -skipTriallelic 1 -minInd 23 -setMinDepth 115 -setMaxDepth 828 \
+	-minMaf 0.05 -minMapQ 30 -minQ 20 -out squirrel_gl_maf05
+2) Rerun ANGSD after running ngsLD to generate genotype likelihoods for unlinked snps.
+
+Note: Use the same command as above, just add a sites (-sites) filter and remove any chromosomes/scaffolds that contained 0 snps. 
+```bash
+angsd -nThreads 10 -bam bam_list.txt -only_proper_pairs 0 -remove_bads 1 -ref egsq_genome_1MBmin.fa -anc egsq_genome_1MBmin.fa \
+	-rf pruned_chroms.rf -sites pruned_sites.txt -GL 1 -doGlf 2 -dosaf 1 -doGeno 11 -doPost 1 -SNP_pval 1e-6 -doMajorMinor 1 \
+	-doMaf 1 -doCounts 1 -doPlink 2 -skipTriallelic 1 -minInd 23 -setMinDepth 115 -setMaxDepth 828 \
+	-minMaf 0.05 -minMapQ 30 -minQ 20 -out squirrel_gl_maf05
+...
 ```
-2) First round of snp filtering using bcftools.
+3) Generate genotype likelihoods for all sites (ie, including invariants) using ANGSD.
+
+Note: Remove -SNP_pval, -skipTriallelic, and -minMaf to generate all sites file.
 ```bash
-# filtering by chromosome, eg chr 1,
-# extracting biallelic markers (remove --min-af 0.05:minor to keep rare alleles, eg for sfs)
-bcftools view --threads 4 \
-  --min-alleles 2 \
-  --max-alleles 2 \
-  --include 'QUAL>=40' \
-  --output-type u \
-  1.vcf.gz | \
-bcftools view --threads 4 \
-  --min-af 0.05:minor \
-  --output-type u \
-  --output 1_biallelic_f1_maf05.vcf
-
-# extracting invariant sites
-
-
-```
-3) Second round of snp filtering using snpCleaner.
-```bash
-# filtering by chromosome, eg chr 1,
-perl snpCleaner.pl \
-  -u 5 \ # minimum read depth for an individual to be considered 'covered'
-  -k 23 \ # minimum number of 'covered' individuals
-  -d 115 \ # minimum raw site read depth 
-  -D 828 \ # maximum raw site read depth 
-  -a 0 \ # minimum number of high-quality alternate alleles for site
-  -H 0.0001 \ # min p-value for exact test of excess of heterozygous
-  -h 0 \ # min p-value for exact test of HWE
-  -o 1_biallelic_f2_maf05.vcf \
-  1_biallelic_f1_maf05.vcf
-```
-4) Final round of snp filtering using bcftools.
-```bash
-
-```
-5) Generate snp likelihoods using ANGSD.
-```bash
-
+angsd -nThreads 10 -bam bam_list.txt -only_proper_pairs 0 -remove_bads 1 -ref egsq_genome_1MBmin.fa -anc egsq_genome_1MBmin.fa \
+	-rf chroms_subset.rf -GL 1 -doGlf 2 -dosaf 1 -doGeno 11 -doPost 1 -doMajorMinor 1 \
+	-doMaf 1 -doCounts 1 -doPlink 2 -minInd 23 -setMinDepth 115 -setMaxDepth 828 \
+	-minMapQ 30 -minQ 20 -out squirrel_gl_maf05
 ```
 # Analyses #
-1)
-2)
+1) Calculate linkage across the genome using ngsLD.
+```bash
+
+```
+2) Perform PCA and admixture analysis with the genotype likelihoods using PCAngsd.
+```bash
+
+```
 3)
 
