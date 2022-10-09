@@ -171,6 +171,19 @@ angsd -nThreads 10 -bam bam_list.txt -only_proper_pairs 0 -remove_bads 1 -ref eg
 # Analyses #
 1) Calculate linkage across the genome using ngsLD.
 ```bash
+# first generate linkage stats on a subset of snps (1%, ~270k) #
+ngsLD --geno squirrel_gl_maf05.beagle.gz \
+	--probs \
+	--n_ind 46 \
+	--n_sites 27272556 \
+	--pos sites.txt \
+	--max_kb_dist 1000 \
+	--rnd_sample 0.01 \
+	--seed 99 \
+	--n_threads 8 \
+	--out squirrel_glmaf05_ld
+
+# calculate ld decay based on this subset #
 
 ```
 2) Perform PCA and admixture analysis with the genotype likelihoods using PCAngsd.
