@@ -2,11 +2,11 @@
 Repository to house scripts used to analyze low-coverage whole genome sequencing of the eastern gray squirrel (Sciurus carolinensis) in Syracuse, New York.
 
 # Tools used (running list) #
-### [Read data QC](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#read-data-qc-only-running-syracuse-samples-as-of-now) ###
+### [Read data QC](https://github.com/agentzero93/syr_squirrel_lcwgs#read-data-qc-only-running-syracuse-samples-as-of-now) ###
 1) [FastQC v.0.11.9](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 2) [MultiQC v.1.12](https://multiqc.info/)
 3) [Trimmomatic v.0.39](https://github.com/usadellab/Trimmomatic)
-### [Alignment](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#alignment-1) ###
+### [Alignment](https://github.com/agentzero93/syr_squirrel_lcwgs#alignment-1) ###
 1) [BWA v.0.7.17](https://github.com/lh3/bwa)
 2) [GATK v.3.8.1](https://gatk.broadinstitute.org/hc/en-us)
 3) [Picard v.2.25.6](https://github.com/broadinstitute/picard)
@@ -14,9 +14,9 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 5) [samtools v.1.13](http://www.htslib.org/)
 6) [QualiMap v.2.2.2-dev](http://qualimap.conesalab.org/)
 7) [MultiQC v.1.12](https://multiqc.info/)
-### [SNP generation](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#snp-generation-1) ###
+### [SNP generation](https://github.com/agentzero93/syr_squirrel_lcwgs#snp-generation-1) ###
 1) [ANGSD v.0.938](http://www.popgen.dk/angsd/index.php/ANGSD)
-### [Analyses](https://github.com/agentzero93/syr_squirrel_lcwgs/edit/main/README.md#analyses) ###
+### [Analyses](https://github.com/agentzero93/syr_squirrel_lcwgs#analyses-1) ###
 1) [ngsLD v.1.1.1](https://github.com/fgvieira/ngsLD)
 2) [PCAngsd v.1.11](https://github.com/Rosemeis/pcangsd)
 3) [R v.4.2.1](https://www.r-project.org/)
