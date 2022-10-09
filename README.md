@@ -148,6 +148,7 @@ angsd -nThreads 10 -bam bam_list.txt -only_proper_pairs 0 -remove_bads 1 -ref eg
 	-rf chroms_subset.rf -GL 1 -doGlf 2 -dosaf 1 -doGeno 11 -doPost 1 -SNP_pval 1e-6 -doMajorMinor 1 \
 	-doMaf 1 -doCounts 1 -doPlink 2 -skipTriallelic 1 -minInd 23 -setMinDepth 115 -setMaxDepth 828 \
 	-minMaf 0.05 -minMapQ 30 -minQ 20 -out squirrel_gl_maf05
+```	
 2) Rerun ANGSD after running ngsLD to generate genotype likelihoods for unlinked snps.
 
 Note: Use the same command as above, just add a sites (-sites) filter and remove any chromosomes/scaffolds that contained 0 snps. 
