@@ -184,7 +184,33 @@ ngsLD --geno squirrel_gl_maf05.beagle.gz \
 	--out squirrel_glmaf05_ld
 
 # calculate ld decay based on this subset #
+fit_LDdecay.R \
+	--ld_files=ld_all.txt \
+	--ld=r2 \
+	--n_ind=46 \
+	--plot_scale=3 \
+	--max_kb_dist 1000 \
+	--fit_boot=100 \
+	--seed 99 \
+	--out=squirrel_glmaf05_decay.pdf
 
+# rerun ngsld based on appropriate decay distance and prune linked snps #
+ngsLD --geno squirrel_gl_maf05.beagle.gz \
+        --probs \
+        --n_ind 46 \
+        --n_sites 27272556 \
+        --pos sites.txt \
+        --max_kb_dist 75 \
+        --n_threads 8 \
+	--out squirrel_glmaf05_ld
+
+gzip squirrel_glmaf05_ld
+
+prune_ngsLD.py --input squirrel_glmaf05_ld.gz \
+	--max_dist 75000 \
+	--min_weight 0.1 \
+	--print_excl squirrel_glmaf05_linked \
+	--output squirrel_glmaf05_unlinked
 ```
 2) Perform PCA and admixture analysis with the genotype likelihoods using PCAngsd.
 ```bash
