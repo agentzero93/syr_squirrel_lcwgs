@@ -200,14 +200,14 @@ ngsLD --geno squirrel_gl_maf05.beagle.gz \
         --n_ind 46 \
         --n_sites 27272556 \
         --pos sites.txt \
-        --max_kb_dist 75 \
+        --max_kb_dist 100 \
         --n_threads 8 \
 	--out squirrel_glmaf05_ld
 
 gzip squirrel_glmaf05_ld
 
 prune_ngsLD.py --input squirrel_glmaf05_ld.gz \
-	--max_dist 75000 \
+	--max_dist 100000 \
 	--min_weight 0.1 \
 	--print_excl squirrel_glmaf05_linked \
 	--output squirrel_glmaf05_unlinked
