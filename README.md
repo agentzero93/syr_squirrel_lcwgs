@@ -184,6 +184,7 @@ ngsLD --geno squirrel_gl_maf05.beagle.gz \
 	--out squirrel_glmaf05_ld
 
 # calculate ld decay based on this subset #
+# plotting each of the chromosomes has slightly different parameters (see relevant folder above) #
 fit_LDdecay.R \
 	--ld_files=ld_all.txt \
 	--ld=r2 \
