@@ -201,7 +201,7 @@ ngsLD --geno squirrel_gl_maf05.beagle.gz \
         --n_sites 27272556 \
         --pos sites.txt \
         --max_kb_dist 100 \
-        --n_threads 8 \
+        --n_threads 24 \
 	--out squirrel_glmaf05_ld
 
 gzip squirrel_glmaf05_ld
