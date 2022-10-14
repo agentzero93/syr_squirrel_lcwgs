@@ -19,8 +19,9 @@ Repository to house scripts used to analyze low-coverage whole genome sequencing
 ### [Analyses](https://github.com/agentzero93/syr_squirrel_lcwgs#analyses-1) ###
 1) [ngsLD v.1.1.1](https://github.com/fgvieira/ngsLD)
 2) [PCAngsd v.1.11](https://github.com/Rosemeis/pcangsd)
-3) [R v.4.2.1](https://www.r-project.org/)
-4)
+3) [ngsRelate v.2](https://github.com/ANGSD/NgsRelate)
+4) [R v.4.2.1](https://www.r-project.org/)
+5)
 
 # Read data QC (only running Syracuse samples as of now) #
 
